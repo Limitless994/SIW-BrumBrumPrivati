@@ -184,4 +184,14 @@
 		<url-pattern>/CaricaStatAdmin</url-pattern>
 	</servlet-mapping>
 	
+		<servlet>
+	<servlet-name>GetTimeServlet</servlet-name>
+		<servlet-class>controller.GetTimeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>GetTimeServlet</servlet-name>
+		<url-pattern>/GetTimeServlet</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

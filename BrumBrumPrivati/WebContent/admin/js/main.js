@@ -265,12 +265,15 @@
     }
 
     // Recent Report
-    const brandProduct = 'rgba(0,181,233,0.8)'
-    const brandService = 'rgba(0,173,95,0.8)'
+    const brandProduct = 'rgba(0,173,95,0.8)'
+    const brandService = 'rgba(0,181,233,0.8)'
 
-    var elements = 5
-    var data1 = [52, 60, 55, 50]
-    var data2 = [102, 70, 80, 100]
+    var acquistate = document.getElementById("acquisto");
+    var noleggiate = document.getElementById("noleggio");
+
+    var elements = 3
+    var data1 = [acquistate.value,acquistate.value,acquistate.value-2,acquistate.value,acquistate.value]
+    var data2 = [noleggiate.value,noleggiate.value+8,noleggiate.value,noleggiate.value+2,noleggiate.value]
 
     var ctx = document.getElementById("recent-rep-chart");
     if (ctx) {
@@ -278,7 +281,7 @@
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['Gennaio', 'Febbraio', 'Marzo', ''],
+          labels: ['Gennaio', 'Febbraio', 'Marzo',],
           datasets: [
             {
               label: 'My First dataset',
@@ -321,8 +324,8 @@
               ticks: {
                 beginAtZero: true,
                 maxTicksLimit: 5,
-                stepSize: 50,
-                max: 150,
+                stepSize: 1,
+                max: 10,
                 fontFamily: "Poppins",
                 fontSize: 12
               },
