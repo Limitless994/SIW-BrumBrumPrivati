@@ -136,14 +136,6 @@
 		<url-pattern>/ConfermaOrdine</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>RicercaConFiltri</servlet-name>
-		<servlet-class>controller.RicercaConFiltri</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>RicercaConFiltri</servlet-name>
-		<url-pattern>/RicercaConFiltri</url-pattern>
-	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>StoricoOrdini</servlet-name>
@@ -176,70 +168,13 @@
 		<servlet-name>ModificaAuto</servlet-name>
 		<servlet-class>controller.ModificaAuto</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>ModificaAuto</servlet-name>
 		<url-pattern>/ModificaAuto</url-pattern>
 	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>AggiungiAlCarrello</servlet-name>
-		<servlet-class>controller.AggiungiAlCarrello</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>AggiungiAlCarrello</servlet-name>
-		<url-pattern>/AggiungiAlCarrello</url-pattern>
-	</servlet-mapping>
-	
-		<servlet>
-		<servlet-name>VisualizzaCarrello</servlet-name>
-		<servlet-class>controller.VisualizzaCarrello</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>VisualizzaCarrello</servlet-name>
-		<url-pattern>/VisualizzaCarrello</url-pattern>
-	</servlet-mapping>
-	
-			<servlet>
-		<servlet-name>SvuotaCarrello</servlet-name>
-		<servlet-class>controller.SvuotaCarrello</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SvuotaCarrello</servlet-name>
-		<url-pattern>/SvuotaCarrello</url-pattern>
-	</servlet-mapping>
-	
-	
 	
 	<servlet>
-		<servlet-name>CompraAutoCarrello</servlet-name>
-		<servlet-class>controller.CompraAutoCarrello</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CompraAutoCarrello</servlet-name>
-		<url-pattern>/CompraAutoCarrello</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>LoginDaCarrello</servlet-name>
-		<servlet-class>controller.LoginDaCarrello</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>LoginDaCarrello</servlet-name>
-		<url-pattern>/LoginDaCarrello</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>LoginDaNoleggio</servlet-name>
-		<servlet-class>controller.LoginDaNoleggio</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>LoginDaNoleggio</servlet-name>
-		<url-pattern>/LoginDaNoleggio</url-pattern>
-	</servlet-mapping>
-		<servlet>
-		
 	<servlet-name>CaricaStatAdmin</servlet-name>
 		<servlet-class>controller.CaricaStatAdmin</servlet-class>
 	</servlet>
