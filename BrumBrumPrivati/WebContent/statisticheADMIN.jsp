@@ -3,7 +3,94 @@
 
 <head>
 <?php include("fetch.php") ?>
+<style>
+* {
+	box-sizing: border-box;
+}
 
+#myInput {
+	background-image: url('/css/searchicon.png');
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+}
+
+#myUL {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#myUL li a {
+	border: 1px solid #ddd;
+	margin-top: -1px; /* Prevent double borders */
+	background-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block
+}
+#myUL
+
+
+ 
+
+
+li
+
+
+ 
+
+
+a
+
+
+
+
+:hover
+
+
+
+
+:not
+
+
+ 
+
+
+(
+.header
+
+
+ 
+
+
+)
+{
+background-color
+
+
+
+
+:
+
+
+ 
+
+
+#eee
+
+
+
+
+;
+}
+</style>
 
 <style>
 li {
@@ -15,26 +102,24 @@ li {
 </style>
 
 <script>
-function myFunction() {
-  // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('td');
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
+	function myFunction() {
+		var input, filter, ul, li, a, i, txtValue;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		ul = document.getElementById("myUL");
+		li = ul.getElementsByTagName("li");
+		for (i = 0; i < li.length; i++) {
+			a = li[i].getElementsByTagName("a")[0];
+			txtValue = a.textContent || a.innerText;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = "";
+			} else {
+				li[i].style.display = "none";
+			}
+		}
+	}
 </script>
+
 <script src="//code.jquery.com/jquery-1.8.3.js"></script>
 
 <%@ include file="include/headindex.jsp"%>
@@ -280,15 +365,15 @@ table tr:nth-child(odd) {
 										</div>
 										<div class="recent-report__chart">
 											<canvas id="recent-rep-chart"></canvas>
-											
+
 											<!-- variabili grafico a mare -->
 
-													<input type="hidden" name="acquisto" id=acquisto
-														value='${statistiche.getAutoAcquistate().size() }'>
-													<input type="hidden" name="noleggio" id=noleggio
-														value='${statistiche.getAutoNoleggiate().size() }'>
+											<input type="hidden" name="acquisto" id=acquisto
+												value='${statistiche.getAutoAcquistate().size() }'>
+											<input type="hidden" name="noleggio" id=noleggio
+												value='${statistiche.getAutoNoleggiate().size() }'>
 
-													<!-- variabili grafico a mare -->
+											<!-- variabili grafico a mare -->
 										</div>
 									</div>
 								</div>
@@ -346,13 +431,16 @@ table tr:nth-child(odd) {
 									</div>
 									<table
 										class="table table-borderless table-striped table-earning">
-										<tr id="myUL">
-											<c:forEach items="${statistiche.getAutoAcquistate()}" var="automobile">
-												<tr>
-												<td><a href="VisAutoSelezionata?targa=${automobile.getTarga()}">${automobile.getTarga()}</a></td>
-												</tr>
-												</c:forEach>
-										</tr>
+										<ul id="myUL">
+											<c:forEach items="${statistiche.getAutoAcquistate()}"
+												var="automobile">
+												<li><a href="#">${automobile.getTarga()}                 
+														${automobile.marca} ${automobile.modello}
+														${automobile.categoria} ${automobile.colore}
+														${automobile.km} ${automobile.alimentazione}
+														${automobile.cambio}</li> </a>
+											</c:forEach>
+										</ul>
 									</table>
 								</div>
 							</div>
@@ -409,24 +497,24 @@ table tr:nth-child(odd) {
 		<script src="admin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
 		<!-- Vendor JS       -->
 		<script src="admin/vendor/slick/slick.min.js">
-				
-			</script>
+			
+		</script>
 		<script src="admin/vendor/wow/wow.min.js"></script>
 		<script src="admin/vendor/animsition/animsition.min.js"></script>
 		<script
 			src="admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-				
-			</script>
+			
+		</script>
 		<script src="admin/vendor/counter-up/jquery.waypoints.min.js"></script>
 		<script src="admin/vendor/counter-up/jquery.counterup.min.js">
-				
-			</script>
+			
+		</script>
 		<script src="admin/vendor/circle-progress/circle-progress.min.js"></script>
 		<script src="admin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
 		<script src="admin/vendor/chartjs/Chart.bundle.min.js"></script>
 		<script src="admin/vendor/select2/select2.min.js">
-				
-			</script>
+			
+		</script>
 
 		<script src="admin/js/main.js"></script>
 </body>
