@@ -38,16 +38,28 @@
 #myUL
 
 
+
+
  
+
+
 
 
 li
 
 
+
+
  
 
 
+
+
 a
+
+
+
+
 
 
 
@@ -57,17 +69,29 @@ a
 
 
 
+
+
+
+
 :not
 
 
+
+
  
+
+
 
 
 (
 .header
 
 
+
+
  
+
+
 
 
 )
@@ -77,13 +101,25 @@ background-color
 
 
 
+
+
+
+
 :
+
+
 
 
  
 
 
+
+
 #eee
+
+
+
+
 
 
 
@@ -434,11 +470,12 @@ table tr:nth-child(odd) {
 										<ul id="myUL">
 											<c:forEach items="${statistiche.getAutoAcquistate()}"
 												var="automobile">
-												<li><a href="#">${automobile.getTarga()}                 
+												<li><a href="#">${automobile.getTarga()}
 														${automobile.marca} ${automobile.modello}
 														${automobile.categoria} ${automobile.colore}
 														${automobile.km} ${automobile.alimentazione}
-														${automobile.cambio}</li> </a>
+														${automobile.cambio}</li>
+												</a>
 											</c:forEach>
 										</ul>
 									</table>
@@ -447,7 +484,10 @@ table tr:nth-child(odd) {
 
 						</div>
 
-
+						<button onclick="getData()">clicca qui per aggiornare</button>
+						<div style="width: 50%;">
+							<canvas id="mycanvas"></canvas>
+						</div>
 
 						<div class="row">
 							<div class="col-lg-12">
@@ -536,7 +576,11 @@ table tr:nth-child(odd) {
 <script src="js/mixitup.min.js"></script>
 <script src="js/main.js"></script>
 
-
+<script
+	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script
+	src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+<script src="js/chart.js"></script>
 
 
 </html>
