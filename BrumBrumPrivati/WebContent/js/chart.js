@@ -1,8 +1,9 @@
 //used for example purposes
 function getArrayElementInPosition(k) {
-	var acquistate1 = document.getElementById("acquistato1");
-	var acquistate2 = document.getElementById("acquistato2");
-	var acquistate3 = document.getElementById("acquistato3");
+	
+	var acquistate1 = document.getElementById("valore1");
+	var acquistate2 = document.getElementById("valore1");
+	var acquistate3 = document.getElementById("valore3");
 
 	var points = [acquistate1.value, acquistate2.value, acquistate3.value];
   
@@ -46,12 +47,79 @@ var myChart = new Chart(ctx_live, {
     }
   }
 });
-
+var empty = new Chart(ctx_live, {
+	  type: "bar",
+	  data: {
+	    labels: [],
+	    datasets: [
+	      {
+	        data: [],
+	        borderWidth: 1,
+	        borderColor: "#00c0ef",
+	        label: "liveCount"
+	      }
+	    ]
+	  },
+	  options: {
+	    responsive: true,
+	    title: {
+	      display: true,
+	      text: "Chart.js - Dynamically Update Chart Via Ajax Requests"
+	    },
+	    legend: {
+	      display: false
+	    },
+	    scales: {
+	      yAxes: [
+	        {
+	          ticks: {
+	            beginAtZero: true
+	          }
+	        }
+	      ]
+	    }
+	  }
+	});
 //this post id drives the example data
-var postId = 1;
+
 
 //logic to get new data
-var getData = function() {
+var getData = function(t) {
+	var postId = 1;
+	myChart.destroy();
+	myChart=new Chart(ctx_live, {
+		  type: "bar",
+		  data: {
+		    labels: [],
+		    datasets: [
+		      {
+		        data: [],
+		        borderWidth: 1,
+		        borderColor: "#00c0ef",
+		        label: "liveCount"
+		      }
+		    ]
+		  },
+		  options: {
+		    responsive: true,
+		    title: {
+		      display: true,
+		      text: "Chart.js - Dynamically Update Chart Via Ajax Requests"
+		    },
+		    legend: {
+		      display: false
+		    },
+		    scales: {
+		      yAxes: [
+		        {
+		          ticks: {
+		            beginAtZero: true
+		          }
+		        }
+		      ]
+		    }
+		  }
+		});
   $.ajax({
     success: function(data) {
       // process your data to pull out what you plan to use to update the chart
@@ -59,12 +127,10 @@ var getData = function() {
 
       // add new label and data point to chart's underlying data structures
       myChart.data.labels.push("Mese " + postId++);
-      myChart.data.datasets[0].data.push(getArrayElementInPosition(0));
-      myChart.data.datasets[0].data.push(getArrayElementInPosition(1));
-      myChart.data.datasets[0].data.push(getArrayElementInPosition(2));
-      myChart.data.datasets[0].data.push(getArrayElementInPosition(3));
+      myChart.data.datasets[0].data.push(t);
       // re-render the chart
       myChart.update();
+      
     }
   });
 };

@@ -40,7 +40,13 @@
 
 
 
+
+
+
  
+
+
+
 
 
 
@@ -50,12 +56,24 @@ li
 
 
 
+
+
+
  
 
 
 
 
+
+
+
 a
+
+
+
+
+
+
 
 
 
@@ -73,12 +91,24 @@ a
 
 
 
+
+
+
+
+
+
 :not
 
 
 
 
+
+
+
  
+
+
+
 
 
 
@@ -89,7 +119,13 @@ a
 
 
 
+
+
+
  
+
+
+
 
 
 
@@ -105,7 +141,16 @@ background-color
 
 
 
+
+
+
+
+
+
 :
+
+
+
 
 
 
@@ -115,7 +160,16 @@ background-color
 
 
 
+
+
+
 #eee
+
+
+
+
+
+
 
 
 
@@ -136,6 +190,29 @@ li {
 }
 }
 </style>
+
+<script type="text/javascript">
+
+
+
+	
+function refresh() {
+	
+	var checkBox1 = document.getElementById("valore1");
+	var checkBox2 = document.getElementById("valore2");
+	var checkBox3 = document.getElementById("valore3");
+	
+	if(checkBox1.checked == true)
+		getData(document.getElementById("valore1").value);
+			if(checkBox2.checked == true)
+				getData(document.getElementById("valore2").value);
+					if(checkBox3.checked == true)
+						getData(document.getElementById("valore3").value);
+					
+					
+}
+
+</script>
 
 <script>
 	function myFunction() {
@@ -484,79 +561,96 @@ table tr:nth-child(odd) {
 
 						</div>
 
-						<button onclick="getData()">clicca qui per aggiornare</button>
+						
+
+						<!-- <canvas id="mycanvas"></canvas> -->
+
+
+
+					
+		<input type="checkbox" id="valore1" name="vehicle1" value='${statistiche.getStoricoNumerAutoVendute()[0]}' onclick="refresh()">
+		<label for="vehicle1">Gennaio</label>
+		
+		<input type="checkbox" id="valore2" name="vehicle1" value='${statistiche.getStoricoNumerAutoVendute()[1]}' onclick="refresh()">
+		<label for="vehicle1">Febbraio</label>
+		
+		<input type="checkbox" id="valore3" name="vehicle1" value='${statistiche.getStoricoNumerAutoVendute()[2]}' onclick="refresh()">
+		<label for="vehicle1">Marzo</label>
+
+
 						<div style="width: 50%;">
 							<canvas id="mycanvas"></canvas>
 						</div>
+					</div>
 
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-									<div class="au-card-title"
-										style="background-image: url('images/bg-title-01.jpg');">
-										<div class="bg-overlay bg-overlay--blue"></div>
-										<h3>
-											<i class="zmdi zmdi-account-calendar"></i>Feedback
-										</h3>
-									</div>
-									<div class="au-task js-list-load">
-										<c:forEach items="${statistiche.getListaFeedback()}"
-											var="feedback">
-											<div class="au-task-list js-scrollbar3">
-												<div class="au-task_item au-task_item--danger">
-													<div class="au-task__item-inner">
-														<h5 class="task">
-															<a href="#">${feedback.getCommento()}</a>
-														</h5>
-														<span>${feedback.getData()}</span> <span>by
-															${feedback.getUser()}</span>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+								<div class="au-card-title"
+									style="background-image: url('images/bg-title-01.jpg');">
+									<div class="bg-overlay bg-overlay--blue"></div>
+									<h3>
+										<i class="zmdi zmdi-account-calendar"></i>Feedback
+									</h3>
+								</div>
+								<div class="au-task js-list-load">
+									<c:forEach items="${statistiche.getListaFeedback()}"
+										var="feedback">
+										<div class="au-task-list js-scrollbar3">
+											<div class="au-task_item au-task_item--danger">
+												<div class="au-task__item-inner">
+													<h5 class="task">
+														<a href="#">${feedback.getCommento()}</a>
+													</h5>
+													<span>${feedback.getData()}</span> <span>by
+														${feedback.getUser()}</span>
 
-													</div>
 												</div>
 											</div>
-										</c:forEach>
-									</div>
+										</div>
+									</c:forEach>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-12"></div>
-							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12"></div>
 						</div>
 					</div>
 				</div>
-				<!-- END MAIN CONTENT-->
-				<!-- END PAGE CONTAINER-->
 			</div>
-
+			<!-- END MAIN CONTENT-->
+			<!-- END PAGE CONTAINER-->
 		</div>
 
-		<!-- Jquery JS-->
-		<script src="admin/vendor/jquery-3.2.1.min.js"></script>
-		<!-- Bootstrap JS-->
-		<script src="admin/vendor/bootstrap-4.1/popper.min.js"></script>
-		<script src="admin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
-		<!-- Vendor JS       -->
-		<script src="admin/vendor/slick/slick.min.js">
-			
-		</script>
-		<script src="admin/vendor/wow/wow.min.js"></script>
-		<script src="admin/vendor/animsition/animsition.min.js"></script>
-		<script
-			src="admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-			
-		</script>
-		<script src="admin/vendor/counter-up/jquery.waypoints.min.js"></script>
-		<script src="admin/vendor/counter-up/jquery.counterup.min.js">
-			
-		</script>
-		<script src="admin/vendor/circle-progress/circle-progress.min.js"></script>
-		<script src="admin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-		<script src="admin/vendor/chartjs/Chart.bundle.min.js"></script>
-		<script src="admin/vendor/select2/select2.min.js">
-			
-		</script>
+	</div>
 
-		<script src="admin/js/main.js"></script>
+	<!-- Jquery JS-->
+	<script src="admin/vendor/jquery-3.2.1.min.js"></script>
+	<!-- Bootstrap JS-->
+	<script src="admin/vendor/bootstrap-4.1/popper.min.js"></script>
+	<script src="admin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+	<!-- Vendor JS       -->
+	<script src="admin/vendor/slick/slick.min.js">
+		
+	</script>
+	<script src="admin/vendor/wow/wow.min.js"></script>
+	<script src="admin/vendor/animsition/animsition.min.js"></script>
+	<script
+		src="admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+		
+	</script>
+	<script src="admin/vendor/counter-up/jquery.waypoints.min.js"></script>
+	<script src="admin/vendor/counter-up/jquery.counterup.min.js">
+		
+	</script>
+	<script src="admin/vendor/circle-progress/circle-progress.min.js"></script>
+	<script src="admin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+	<script src="admin/vendor/chartjs/Chart.bundle.min.js"></script>
+	<script src="admin/vendor/select2/select2.min.js">
+		
+	</script>
+
+	<script src="admin/js/main.js"></script>
 </body>
 
 <footer>
