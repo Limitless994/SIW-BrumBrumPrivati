@@ -60,16 +60,6 @@ public class ConfermaOrdine  extends HttpServlet {
 		Pagamento newPagamento=new Pagamento(nextOrderID, metodoPagamento, nextOrderID, totaleOrdine);
 		spedizione1.save(newSpedizione);
 		pagamento.save(newPagamento);
-		if(noleggio)System.out.println("STAI NOLEGGIANDO");
-		else System.out.println("STAI ACQUISTANDO");
-		for(int i=0;i<lAuto.size();i++) {
-			Automobile automobile=autoDao.find(lAuto.get(i).getTarga());
-			if(noleggio)automobile.setDisponibilita("NOLEGGIATA");
-			else automobile.setDisponibilita("VENDUTA");
-			autoDao.update(automobile);
-			ordine.ordine_contiene_auto(automobile, newOrdine);
-			ordine.ordine_effettuato_da_utente(loggedUser, automobile, newOrdine);
-		}
 		
 		String email=(String) req.getSession().getAttribute("email");
 //		send_mail_gmail.sendEmail(email);

@@ -69,19 +69,17 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${automobiliDaComprare}" var="autoDaComprare">
 					<tr>
 						<th scope="row">1</th>
-						<td><img src="${autoDaComprare.immagine}" height=15% width=18%></td>
-						<td>${autoDaComprare.getMarca()} ${autoDaComprare.getModello()} ${autoDaComprare.getColore()}</td>
-						<td>${autoDaComprare.getPrezzovendita()}</td>
+						<td><img src="${AutomobileAcquistata.immagine}" height=15% width=18%></td>
+						<td>${AutomobileAcquistata.getMarca()} ${autoDaComprare.getModello()} ${autoDaComprare.getColore()}</td>
+						<td>${AutomobileAcquistata.getPrezzovendita()}</td>
 					</tr>
 					
-				</c:forEach>
 						<tr>
 						<td colspan="3"><strong> Prezzo Totale</strong></td>
 						<!--  DA AGGIUSTARE FARE LA SOMMA -->
-						<td>${totaleOrdine}</td>
+						<td>${AutomobileAcquistata.getPrezzovendita()}</td>
 					</tr>
 				</tbody>
 			</table>
