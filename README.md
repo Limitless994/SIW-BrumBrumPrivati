@@ -18,6 +18,7 @@ Lato Utente (parte specializzata):
 -Visualizzazione storico ordini.
 -Visualizzazione e rilascio di feedback di/su un'automobile.
 -Acquisto e noleggio di un' automobile.
+-Possibilità di eliminare il profilo creato.
 
 Lato Admin (parte specializzata):
 -Dashboard admin dalla quale è possibile monitorare diversi fattori:
