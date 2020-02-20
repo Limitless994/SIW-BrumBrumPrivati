@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>    <!-- Serve a cambiare in jsp -->
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" 
-prefix="c" %>
+
 
 
 
@@ -23,7 +21,7 @@ prefix="c" %>
                     <div class="row">
                         <div class="col-lg-12">
                             
-                            <h2>C'Ãˆ L'AUTO PER TE, FIDATI.</h2>
+                            <h2>C'È L'AUTO PER TE, FIDATI.</h2>
                             <a href="LeNostreAuto" class="primary-btn">TUTTE LE AUTO</a>
                         </div>
                     </div>

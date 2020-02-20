@@ -34,7 +34,7 @@
 
 
 				<!-- One "tab" for each step in the form: -->
-<c:if test= "${SonoUnRivenditore==false}" >
+
 				<div class="tab">
 					<div class="form-row row-space">
 						<div class="name">
@@ -66,8 +66,8 @@
 					<div class="row row-space"></div>
 				</div>
 				<!--  fine primo tab -->
-				
-</c:if>
+
+
 
 				<!-- fine secondo tab -->
 
@@ -141,8 +141,8 @@
 					</div>
 					<div>
 						<label>Carica un file con le informazioni riguardo
-							l'affidabilit√† creditizia . </label> <input name="immagine"
-							type="file" size="20">
+							l'affidabilit‡† creditizia . </label> <input name="immagine" type="file"
+							size="20">
 					</div>
 				</div>
 
@@ -153,8 +153,7 @@
 
 
 			<div style="text-align: center; margin-top: 40px;">
-				<span class="step"></span> <span
-					class="step"></span>
+				<span class="step"></span> <span class="step"></span>
 			</div>
 			<div style="overflow: auto;">
 				<div style="float: right;">
@@ -171,18 +170,11 @@
 
 		<script src="js/addCarScript.js"></script>
 
-
-
-
-
-
-
-
 		<!-- FOOTER -->
-		
+
 	</form>
 </body>
 <footer>
-			<%@ include file="include/TEMPLATE-FOOTER.jsp"%>
-		</footer>
+	<%@ include file="include/TEMPLATE-FOOTER.jsp"%>
+</footer>
 </html>

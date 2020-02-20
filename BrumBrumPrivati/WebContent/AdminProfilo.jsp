@@ -89,10 +89,8 @@
 							<p class="font-weight-bold">Aggiungi un automobile al sistema
 							</p>
 						</div>
-
-
-						<!-- FINE CARD BODY -->
 					</div>
+					<!-- FINE CARD BODY -->
 	
 
 	<!-- QUA RICHIAMO LA PAGINA DELLE STATISTICHE -->

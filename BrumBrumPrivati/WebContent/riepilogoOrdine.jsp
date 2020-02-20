@@ -71,7 +71,7 @@
 				<tbody>
 					<tr>
 						<th scope="row">1</th>
-						<td><img src="${AutomobileAcquistata.immagine}" height=15% width=18%></td>
+						<td><img src="${autoDaComprare.immagine}" height=15% width=18%></td>
 						<td>${AutomobileAcquistata.getMarca()} ${autoDaComprare.getModello()} ${autoDaComprare.getColore()}</td>
 						<td>${AutomobileAcquistata.getPrezzovendita()}</td>
 					</tr>

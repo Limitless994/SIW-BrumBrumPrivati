@@ -9,6 +9,7 @@ function getArrayElementInPosition(k) {
   
   return points[k];
 }
+
 function resetGraph() {
 	myChart.destroy();
 	myChart=new Chart(ctx_live, {
@@ -60,8 +61,9 @@ function giveMeMonth(idMonth) {
 	if(idMonth==11) return "Novembre";
 	if(idMonth==12) return "Dicembre";
 
-
 }
+
+
 //create initial empty chart
 var ctx_live = document.getElementById("mycanvas");
 var myChart = new Chart(ctx_live, {
@@ -81,7 +83,7 @@ var myChart = new Chart(ctx_live, {
     responsive: true,
     title: {
       display: true,
-      text: "Statistiche auto vendute in quest'anno."
+      text: "Statistiche auto vendute in questo trimestre."
     },
     legend: {
       display: false

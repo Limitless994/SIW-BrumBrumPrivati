@@ -39,7 +39,7 @@
 
 
 				<!-- One "tab" for each step in the form: -->
-					<c:if test= "${SonoUnRivenditore==false}" >
+					
 				<div class="tab">
 				
 					<div class="form-row row-space">
@@ -75,7 +75,7 @@
 					<div class="row row-space"></div>
 				</div>
 				<!--  fine primo tab -->
-</c:if>
+
 
 
 

@@ -41,7 +41,7 @@ public class NoleggiaAuto extends HttpServlet {
 
 		AutomobileDao autoDao = factory.getAutomobileDao();
 
-		String targa=targaAuto,loggedUser=null,indirizzo="Via Speronari, 8, 20123 Milano MI",modalitaSpedizione="ritiro in sede",sede=null,metodoPagamento="Bonifico",iban=null,fileAffidabilita=null;
+		String targa=targaAuto,loggedUser=null,indirizzo="Via Speronari, 8, 20123 Milano MI", modalitaSpedizione="ritiro in sede",sede=null,metodoPagamento="Bonifico",iban=null,fileAffidabilita=null;
 
 		List<Automobile> autoDaComprare = new ArrayList<Automobile>();
 		double totaleOrdine=0;

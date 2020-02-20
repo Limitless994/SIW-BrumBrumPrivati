@@ -15,17 +15,20 @@ import model.Pagamento;
 import model.Spedizione;
 import persistence.DAOFactory;
 import persistenceDao.AutomobileDao;
+
 import persistenceDao.OrdineDao;
 import persistenceDao.PagamentoDao;
 import persistenceDao.SpedizioneDao;
 
 public class ConfermaOrdine  extends HttpServlet {
-
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		
 		boolean noleggio=(boolean) req.getSession().getAttribute("noleggio");
-		List<Automobile> lAuto=(List<Automobile>) req.getSession().getAttribute("automobiliDaComprare");
+		List<Automobile> lAuto= (List<Automobile>) req.getSession().getAttribute("automobiliDaComprare");
+		
 		String targaAuto=(String) req.getSession().getAttribute("targa");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		OrdineDao ordine=factory.getOrdineDAO();
@@ -37,7 +40,7 @@ public class ConfermaOrdine  extends HttpServlet {
 		int lastOrderID=ordine.getLastOrder();
 		lastOrderID+=1;
 		String nextOrderID = Integer.toString(lastOrderID); 
-		
+
 		double totaleOrdine=(double) req.getSession().getAttribute("totaleOrdine");
 		sede =(String) req.getSession().getAttribute("spedizione");
 		metodoPagamento = (String) req.getSession().getAttribute("metodoPagamento");
@@ -52,19 +55,37 @@ public class ConfermaOrdine  extends HttpServlet {
 				indirizzo="Via Alessandro Volta 132, Rende, CS";
 			}
 		}
-		
+
 		Ordine newOrdine= new Ordine(nextOrderID,indirizzo,"ordine ricevuto");
 		ordine.save(newOrdine);
-		
+
 		Spedizione newSpedizione=new Spedizione(nextOrderID, indirizzo, modalitaSpedizione, nextOrderID);
 		Pagamento newPagamento=new Pagamento(nextOrderID, metodoPagamento, nextOrderID, totaleOrdine);
 		spedizione1.save(newSpedizione);
 		pagamento.save(newPagamento);
+
+
+		if(noleggio)
+			System.out.println("STAI NOLEGGIANDO");
+		else 
+			System.out.println("STAI ACQUISTANDO");
+			
+			
+		for(int i=0;i<lAuto.size();i++) {
+			Automobile automobile=autoDao.find(lAuto.get(i).getTarga());
+			if(noleggio)automobile.setDisponibilita("NOLEGGIATA");
+			else automobile.setDisponibilita("VENDUTA");
+			autoDao.update(automobile);
+			ordine.ordine_contiene_auto(automobile, newOrdine);
+			ordine.ordine_effettuato_da_utente(loggedUser, automobile, newOrdine);
+		}
 		
+
 		String email=(String) req.getSession().getAttribute("email");
-//		send_mail_gmail.sendEmail(email);
-		
-		
+		//		send_mail_gmail.sendEmail(email);
+
+
+
 		resp.sendRedirect("index.jsp");
 	}
 

@@ -1,16 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<!-- Serve a cambiare in jsp -->
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-<?php include("fetch.php") ?>
+
+
+<%@ include file="include/headindex.jsp"%>
+<%@ include file="include/NewHEADER.jsp"%>
+<%@ include file="include/adminCSSstyle.jsp"%>
+</head>
+
 <style>
-* {
-	box-sizing: border-box;
+{
+box-sizing
+:
+ 
+border-box
+;
+
+
 }
 
-input[type="checkbox"]
-{
-    vertical-align:middle;
+input[type="checkbox"] {
+	vertical-align: middle;
+	color: #ffffff;
 }
 
 #myInput {
@@ -40,204 +57,14 @@ input[type="checkbox"]
 	color: black;
 	display: block
 }
+
 #myUL
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
 li
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
 a
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 :hover
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 :not
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-(
-.header
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-)
-{
-background-color
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-#eee
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-;
+ (.header ) {
+	background-color: #eee;
 }
 </style>
 
@@ -291,59 +118,25 @@ li {
 
 <script src="//code.jquery.com/jquery-1.8.3.js"></script>
 
-<%@ include file="include/headindex.jsp"%>
-<%@ include file="include/NewHEADER.jsp"%>
 
-<!-- Required meta tags-->
-<meta charset="UTF-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="au theme template">
-<meta name="author" content="Hau Nguyen">
-<meta name="keywords" content="au theme template">
 
 <!-- Title Page-->
-<title>Dashboard</title>
+<title>Admin Dashboard</title>
 
-<!-- Fontfaces CSS-->
-<link href="admin/css/font-face.css" rel="stylesheet" media="all">
-<link href="admin/vendor/font-awesome-4.7/css/font-awesome.min.css"
-	rel="stylesheet" media="all">
-<link href="admin/vendor/font-awesome-5/css/fontawesome-all.min.css"
-	rel="stylesheet" media="all">
-<link
-	href="admin/vendor/mdi-font/css/material-design-iconic-font.min.css"
-	rel="stylesheet" media="all">
 
-<!-- Bootstrap CSS-->
-<link href="admin/vendor/bootstrap-4.1/bootstrap.min.css"
-	rel="stylesheet" media="all">
-
-<!-- Vendor CSS-->
-<link href="admin/vendor/animsition/animsition.min.css" rel="stylesheet"
-	media="all">
-<link
-	href="admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
-	rel="stylesheet" media="all">
-<link href="admin/vendor/wow/animate.css" rel="stylesheet" media="all">
-<link href="admin/vendor/css-hamburgers/hamburgers.min.css"
-	rel="stylesheet" media="all">
-<link href="admin/vendor/slick/slick.css" rel="stylesheet" media="all">
-<link href="admin/vendor/select2/select2.min.css" rel="stylesheet"
-	media="all">
-<link href="admin/vendor/perfect-scrollbar/perfect-scrollbar.css"
-	rel="stylesheet" media="all">
-
-<!-- Main CSS-->
-<link href="admin/css/theme.css" rel="stylesheet" media="all">
 <style>
 .checkbox {
 	margin-right: 5px;
+	margin-bottom: 5px;
 	font-size: 16px;
+	
+	
 }
 
 input[type="checkbox"] {
-	margin-right: 5px;
+
+	background-color: #ffffff;
+
 }
 
 table {
@@ -360,19 +153,23 @@ table tr th {
 }
 
 table tr td {
-	padding: 5px 10px;
+	padding: 5px 30px;
+	background: #ffffff;
 }
 
 table tr:nth-child(odd) {
 	background: #eee;
 }
+
+body {
+  background-color: white;
+}
+
 </style>
 
 
-</head>
 
-
-<body class="animsition">
+<body >
 	<div class="page-wrapper" align="center">
 		<!-- HEADER MOBILE-->
 
@@ -582,59 +379,80 @@ table tr:nth-child(odd) {
 								</div>
 							</div>
 						</div>
-
+						<div class="form-row"></div>
+						
+						
+						
 						<div class="row">
 							<div class="col-lg-12">
-								<h2 class="title-1 m-b-25">Storico ordini</h2>
+								<div class="au-card-title"
+									style="background-image: url('images/bg-title-01.jpg');">
+									<div class="bg-overlay bg-overlay--blue"></div>
+									<h3>
+										<i class="zmdi zmdi-account-calendar"></i>Storico ordini
+									</h3>
+								</div>
 								<div class="table-responsive table--no-card m-b-40">
+								<div class="form-row"></div>
 									<div class="container">
 										<div class="col-md-8 col-md-offset-2">
 											<input type="text" id="myInput" onkeyup="myFunction()"
-												placeholder="Search for names..">
+												placeholder="Cerca per caratteristiche...">
 										</div>
-										<div class="col-md-8 col-md-offset-2">
-											<table class="table table-striped" id="table">
-
-											</table>
-										</div>
+										<div class="form-row"></div>
 									</div>
-									<table
-										class="table table-borderless table-striped table-earning">
+									<table class="table table-striped">
 										<ul id="myUL">
 											<c:forEach items="${statistiche.getAutoAcquistate()}"
 												var="automobile">
-												<li><a href="#">${automobile.getTarga()}
-														${automobile.marca} ${automobile.modello}
-														${automobile.categoria} ${automobile.colore}
-														${automobile.km} ${automobile.alimentazione}
-														${automobile.cambio}</li>
-												</a>
+												<li><a href="#"> ${automobile.marca} |
+														${automobile.modello} | ${automobile.categoria} |
+														${automobile.colore} | ${automobile.alimentazione} |
+														${automobile.cambio}</a></li>
 											</c:forEach>
 										</ul>
 									</table>
 								</div>
 							</div>
-
 						</div>
 
-
-						<input type="checkbox" id="valore1" name="vehicle1"
-							value='${statistiche.getStoricoNumerAutoVendute()[0]}'
-							onclick="refresh()"> <label for="vehicle1">Gennaio</label>
-
-							<input type="checkbox" id="valore2" name="vehicle1"
-							value='${statistiche.getStoricoNumerAutoVendute()[1]}'
-							onclick="refresh()"> <label for="vehicle1">Febbraio</label>
-
-							<input type="checkbox" id="valore3" name="vehicle1"
-							value='${statistiche.getStoricoNumerAutoVendute()[2]}'
-							onclick="refresh()"> <label for="vehicle1">Marzo</label>
+						<div class="form-row"></div>
 						
+						<div class="row">
+						<div class="col-lg-12">
+							<div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+							<div class="au-card-title"
+									style="background-image: url('images/bg-title-01.jpg');">
+									<div class="bg-overlay bg-overlay--blue"></div>
+									<h3>
+										<i class="zmdi zmdi-account-calendar"></i>Grafico auto vendute in base ai mesi
+									</h3>
+									
+								</div>
+					<table>
+					<tr>
+						<td><input type="checkbox" id="valore1" name="vehicle1"
+							value='${statistiche.getStoricoNumerAutoVendute()[0]}'
+							onclick="refresh()"> <label for="vehicle1">Gennaio</label></td>
+
+						<td><input type="checkbox" id="valore2" name="vehicle1"
+							value='${statistiche.getStoricoNumerAutoVendute()[1]}'
+							onclick="refresh()"> <label for="vehicle1">Febbraio</label></td>
+						
+						<td><input type="checkbox" id="valore3" name="vehicle1"
+							value='${statistiche.getStoricoNumerAutoVendute()[3]}'
+							onclick="refresh()"> <label for="vehicle1">Marzo</label></td>
+					</tr>
+					</table>
+					</div>
+					</div>
+					</div>
 						<div style="width: 50%;">
 							<canvas id="mycanvas"></canvas>
 						</div>
 					</div>
-
+<div class="form-row">
+</div><div class="form-row"></div>
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
@@ -645,15 +463,16 @@ table tr:nth-child(odd) {
 										<i class="zmdi zmdi-account-calendar"></i>Feedback
 									</h3>
 								</div>
-								<div class="au-task js-list-load">
+								<div>
 									<c:forEach items="${statistiche.getListaFeedback()}"
 										var="feedback">
-										<div class="au-task-list js-scrollbar3">
-											<div class="au-task_item au-task_item--danger">
+										<div>
+											<div>
 												<div class="au-task__item-inner">
 													<h5 class="task">
 														<a href="#">${feedback.getCommento()}</a>
 													</h5>
+
 													<span>${feedback.getData()}</span> <span>by
 														${feedback.getUser()}</span>
 
@@ -664,14 +483,13 @@ table tr:nth-child(odd) {
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12"></div>
-						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-12"></div>
+					</div>
+
 				</div>
 			</div>
-			<!-- END MAIN CONTENT-->
-			<!-- END PAGE CONTAINER-->
 		</div>
 
 	</div>
@@ -709,9 +527,11 @@ table tr:nth-child(odd) {
 	<%@ include file="include/TEMPLATE-FOOTER.jsp"%>
 </footer>
 <!-- Footer Section End -->
-<script type="text/javascript">
-	
-</script>
+
+
+
+<script type="text/javascript"></script>
+
 <!-- Js Plugins -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -727,6 +547,5 @@ table tr:nth-child(odd) {
 <script
 	src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 <script src="js/chart.js"></script>
-
 
 </html>
