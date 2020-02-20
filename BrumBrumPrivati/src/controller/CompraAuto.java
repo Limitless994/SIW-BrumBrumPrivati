@@ -67,6 +67,7 @@ public class CompraAuto extends HttpServlet {
 		
 		resp.sendRedirect("riepilogoOrdine.jsp");
 		
+		
 	}
 
 	@Override
