@@ -11,7 +11,7 @@ Lato Utente (parte comune):
 -Sistema di notifica degli ordini tramite email.
 
 Lato Utente (parte specializzata):
--Registrazione tramite API di Facebook.
+-Registrazione tramite API di Facebook.(NON ANCORA IMPLEMENTATO)
 -Visualizzazione storico ordini.
 -Visualizzazione e rilascio di feedback di/su un'automobile.
 -Acquisto e noleggio di un' automobile.
