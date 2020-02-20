@@ -9,6 +9,9 @@ Lato Utente (parte comune):
 -Ricerca di un'automobile.
 -Visualizzazione dettagliata di un'automobile.
 -Sistema di notifica degli ordini tramite email.
+-Possibilità di aggiunta di un'automobile.
+-Possibilità di modificare un'automobile aggiunta.
+-Possibilità di rimuovere un'automobile aggiunta.
 
 Lato Utente (parte specializzata):
 -Registrazione tramite API di Facebook.(NON ANCORA IMPLEMENTATO)
@@ -17,10 +20,7 @@ Lato Utente (parte specializzata):
 -Acquisto e noleggio di un' automobile.
 
 Lato Admin (parte specializzata):
--Possibilità di aggiunta di un'automobile.
--Possibilità di modificare un'automobile aggiunta.
--Possibilità di rimuovere un'automobile aggiunta.
 -Dashboard admin dalla quale è possibile monitorare diversi fattori:
-  -Statistiche di vendite con grafici dinamici tramite chiamata ajax (chart js).
-  -Feedback lasciati e ricerca tramite chiamate ajax degli ordini effettuati.
+-Statistiche di vendite con grafici dinamici tramite chiamata ajax (chart js).
+-Feedback lasciati e ricerca tramite chiamate ajax degli ordini effettuati.
   
