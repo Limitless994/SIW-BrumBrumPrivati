@@ -66,6 +66,7 @@ public class CompraAuto extends HttpServlet {
 		req.getSession().setAttribute("noleggio",noleggio );
 		
 		resp.sendRedirect("riepilogoOrdine.jsp");
+		
 	}
 
 	@Override
