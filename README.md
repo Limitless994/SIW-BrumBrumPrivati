@@ -23,3 +23,4 @@ Lato Admin (parte specializzata):
 -Dashboard admin dalla quale è possibile monitorare diversi fattori:
   -Statistiche di vendite con grafici dinamici tramite chiamata ajax (chart js).
   -Feedback lasciati e ricerca tramite chiamate ajax degli ordini effettuati.
+  
