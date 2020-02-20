@@ -8,6 +8,11 @@
 	box-sizing: border-box;
 }
 
+input[type="checkbox"]
+{
+    vertical-align:middle;
+}
+
 #myInput {
 	background-image: url('/css/searchicon.png');
 	background-position: 10px 12px;
@@ -43,7 +48,13 @@
 
 
 
+
+
+
  
+
+
+
 
 
 
@@ -59,6 +70,9 @@ li
 
 
 
+
+
+
  
 
 
@@ -67,7 +81,16 @@ li
 
 
 
+
+
+
 a
+
+
+
+
+
+
 
 
 
@@ -97,6 +120,12 @@ a
 
 
 
+
+
+
+
+
+
 :not
 
 
@@ -105,7 +134,13 @@ a
 
 
 
+
+
+
  
+
+
+
 
 
 
@@ -122,7 +157,13 @@ a
 
 
 
+
+
+
  
+
+
+
 
 
 
@@ -147,7 +188,16 @@ background-color
 
 
 
+
+
+
+
+
+
 :
+
+
+
 
 
 
@@ -163,7 +213,16 @@ background-color
 
 
 
+
+
+
 #eee
+
+
+
+
+
+
 
 
 
@@ -192,26 +251,23 @@ li {
 </style>
 
 <script type="text/javascript">
+	function refresh() {
 
+		var checkBox1 = document.getElementById("valore1");
+		var checkBox2 = document.getElementById("valore2");
+		var checkBox3 = document.getElementById("valore3");
 
+		if (checkBox1.checked == true)
+			getData(document.getElementById("valore1").value, 1);
+		if (checkBox2.checked == true)
+			getData(document.getElementById("valore2").value, 2);
+		if (checkBox3.checked == true)
+			getData(document.getElementById("valore3").value, 3);
 
-	
-function refresh() {
-	
-	var checkBox1 = document.getElementById("valore1");
-	var checkBox2 = document.getElementById("valore2");
-	var checkBox3 = document.getElementById("valore3");
-	
-	if(checkBox1.checked == true)
-		getData(document.getElementById("valore1").value);
-			if(checkBox2.checked == true)
-				getData(document.getElementById("valore2").value);
-					if(checkBox3.checked == true)
-						getData(document.getElementById("valore3").value);
-					
-					
-}
-
+		if (checkBox1.checked == false && checkBox2.checked == false
+				&& checkBox3.checked == false)
+			resetGraph();
+	}
 </script>
 
 <script>
@@ -561,23 +617,19 @@ table tr:nth-child(odd) {
 
 						</div>
 
+
+						<input type="checkbox" id="valore1" name="vehicle1"
+							value='${statistiche.getStoricoNumerAutoVendute()[0]}'
+							onclick="refresh()"> <label for="vehicle1">Gennaio</label>
+
+							<input type="checkbox" id="valore2" name="vehicle1"
+							value='${statistiche.getStoricoNumerAutoVendute()[1]}'
+							onclick="refresh()"> <label for="vehicle1">Febbraio</label>
+
+							<input type="checkbox" id="valore3" name="vehicle1"
+							value='${statistiche.getStoricoNumerAutoVendute()[2]}'
+							onclick="refresh()"> <label for="vehicle1">Marzo</label>
 						
-
-						<!-- <canvas id="mycanvas"></canvas> -->
-
-
-
-					
-		<input type="checkbox" id="valore1" name="vehicle1" value='${statistiche.getStoricoNumerAutoVendute()[0]}' onclick="refresh()">
-		<label for="vehicle1">Gennaio</label>
-		
-		<input type="checkbox" id="valore2" name="vehicle1" value='${statistiche.getStoricoNumerAutoVendute()[1]}' onclick="refresh()">
-		<label for="vehicle1">Febbraio</label>
-		
-		<input type="checkbox" id="valore3" name="vehicle1" value='${statistiche.getStoricoNumerAutoVendute()[2]}' onclick="refresh()">
-		<label for="vehicle1">Marzo</label>
-
-
 						<div style="width: 50%;">
 							<canvas id="mycanvas"></canvas>
 						</div>
