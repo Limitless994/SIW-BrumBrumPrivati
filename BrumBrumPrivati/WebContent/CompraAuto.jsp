@@ -58,7 +58,7 @@
 									</div>
 								</div>
 								<div class="col-2 col-lg-5 offset-lg-0">
-									<select type="sede" name="selezionesede" id="selezionesede"
+									<select type="text" name="selezionesede" id="selezionesede"
 										style='display: none;'>
 										<option>Seleziona una sede</option>
 										<option value="roma">Roma</option>
