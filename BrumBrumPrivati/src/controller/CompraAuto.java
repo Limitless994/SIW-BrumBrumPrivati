@@ -40,97 +40,38 @@ public class CompraAuto extends HttpServlet {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 
 		AutomobileDao autoDao = factory.getAutomobileDao();
-		boolean daCarrello=(boolean) req.getSession().getAttribute("acqCarrello");
 
-		System.out.println("sono la bool:"+daCarrello);
-		String targa=targaAuto,loggedUser=null,indirizzo="Via Speronari, 8, 20123 Milano MI",modalitaSpedizione="ritiro in sede",sede=null,metodoPagamento=null,iban=null,fileAffidabilita=null;
-
-		List<Automobile> autoDaComprare = new ArrayList<Automobile>();
-		double totaleOrdine=0;
+		String targa=targaAuto,indirizzo="Via Speronari, 8, 20123 Milano MI",modalitaSpedizione="ritiro in sede",sede="Via Speronari 32, Milano",metodoPagamento=null,iban=null,fileAffidabilita=null;
 
 		String email=req.getParameter("email");
 		metodoPagamento = req.getParameter("pagamento");
 		iban = req.getParameter("iban");
 		fileAffidabilita = req.getParameter("immagine");
-		loggedUser=req.getParameter("email");
 		String nome= req.getParameter("nome")+" ";
 		String cognome= req.getParameter("cognome");
-		boolean VerificaSeSonoUnRivenditore=false;
+		modalitaSpedizione=req.getParameter("spedizione");
+		sede=req.getParameter("selezionesede");
 
-
+		if(modalitaSpedizione.equals("others")) {
+			if(sede.equals("roma")) {
+				indirizzo="Via Sant'Agnese 12,  Roma";
+			}else {
+				indirizzo="Via Alessandro Volta 132, Rende, CS";
+			}
+		}
+		Automobile automobile=autoDao.find(targa);
 
 		req.getSession().setAttribute("nome", nome);
 		req.getSession().setAttribute("cognome", cognome);
-		
-		
-		if(VerificaSeSonoUnRivenditore==false)
-			req.getSession().setAttribute("indirizzo", indirizzo);
 		req.getSession().setAttribute("indirizzo", indirizzo);
 		req.getSession().setAttribute("email", email);
 		req.getSession().setAttribute("metodoPagamento", metodoPagamento);
-
-
 		req.getSession().setAttribute("iban", iban);
-
-
-		if(daCarrello==false)
-		{
-
-			Automobile automobile=autoDao.find(targa);
-			totaleOrdine+=Double.parseDouble(automobile.getPrezzovendita());
-			
-			if(VerificaSeSonoUnRivenditore==false) {
-			modalitaSpedizione = req.getParameter("spedizione");
-			sede = req.getParameter("selezionesede");
-
-
-			if(modalitaSpedizione.equals("others")) {
-				if(sede.equals("roma")) {
-					indirizzo="Via Sant'Agnese 12,  Roma";
-				}else {
-					indirizzo="Via Alessandro Volta 132, Rende, CS";
-				}
-			}}
-
-
-			String descrizione=automobile.getMarca()+" "+automobile.getModello()+" "+automobile.getColore();
-			String imgAutoRiep=automobile.getImmagine();
-			String prezzoAuto=automobile.getPrezzovendita();
-			req.getSession().setAttribute("targa", targaAuto);
-
-			req.getSession().setAttribute("spedizione", modalitaSpedizione); 
-
-			req.getSession().setAttribute("descrizione", descrizione);
-			req.getSession().setAttribute("imgAutoRiep", imgAutoRiep);  //non è una stringa!!!!!!!!!
-			req.getSession().setAttribute("prezzoAuto", prezzoAuto);
-
-
-
-			autoDaComprare.add(automobile);
-			//req.getRequestDispatcher("/riepilogoOrdine.jsp").forward(req, resp);
-
-		}
-		else
-		{
-			
+		req.getSession().setAttribute("sede", sede);
+		req.getSession().setAttribute("AutomobileAcquistata", automobile); 
+		req.getSession().setAttribute("azione", "acquisto");
 		
-
-			for(int i=0;i<autoDaComprare.size();i++) {
-				totaleOrdine+=Double.parseDouble(autoDaComprare.get(i).getPrezzovendita());
-				System.out.println(" faccio parte della lista: "+autoDaComprare.get(i));
-			}
-
-		}
-
-
-		req.getSession().setAttribute("automobiliDaComprare", autoDaComprare);
-		req.getSession().setAttribute("totaleOrdine", totaleOrdine);
-		
-		boolean noleggio= false;
-		req.getSession().setAttribute("noleggio",noleggio );
-
 		resp.sendRedirect("riepilogoOrdine.jsp");
-
 
 	}
 
