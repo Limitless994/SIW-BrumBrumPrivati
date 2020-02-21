@@ -1,17 +1,12 @@
 package persistence;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 
 import exception.PersistenceException;
-import javafx.util.Pair;
-import model.Automobile;
 import model.ComplexFeedback;
 import model.Feedback;
 import persistenceDao.FeedbackDao;
