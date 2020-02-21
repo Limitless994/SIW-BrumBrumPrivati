@@ -60,7 +60,7 @@
 						<div class="flex-c-m">
 
 							<fb:login-button scope="public_profile,email"
-								onlogin="checkLoginState();">
+								onlogin="checkLoginState('index.jsp');">
 							</fb:login-button>
 						</div>
 

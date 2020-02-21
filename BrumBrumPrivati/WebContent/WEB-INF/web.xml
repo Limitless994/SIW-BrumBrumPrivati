@@ -163,35 +163,54 @@
 		<servlet-name>PostaFeedback</servlet-name>
 		<url-pattern>/PostaFeedback</url-pattern>
 	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>ModificaAuto</servlet-name>
 		<servlet-class>controller.ModificaAuto</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>ModificaAuto</servlet-name>
 		<url-pattern>/ModificaAuto</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
-	<servlet-name>CaricaStatAdmin</servlet-name>
+		<servlet-name>CaricaStatAdmin</servlet-name>
 		<servlet-class>controller.CaricaStatAdmin</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>CaricaStatAdmin</servlet-name>
 		<url-pattern>/CaricaStatAdmin</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
-	<servlet-name>GetTimeServlet</servlet-name>
+
+	<servlet>
+		<servlet-name>GetTimeServlet</servlet-name>
 		<servlet-class>controller.GetTimeServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>GetTimeServlet</servlet-name>
 		<url-pattern>/GetTimeServlet</url-pattern>
 	</servlet-mapping>
+	<servlet>
+
+		<servlet-name>facebookLogin</servlet-name>
+		<servlet-class>controller.facebookLogin</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>facebookLogin</servlet-name>
+		<url-pattern>/facebookLogin</url-pattern>
+	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>SocialLogin</servlet-name>
+		<servlet-class>controller.SocialLogin</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SocialLogin</servlet-name>
+		<url-pattern>/SocialLogin</url-pattern>
+	</servlet-mapping>
+
 </web-app>

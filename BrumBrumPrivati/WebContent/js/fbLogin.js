@@ -66,12 +66,12 @@ function buildProfile(user) {
 	var surname = user.last_name;
 	var email = user.email;
 	$.ajax({
-		url : 'sociallogin',
-		data : "email=" + email + "&nome=" + name + "&cognome=" + surname+ "&tipo=facebook",
+		url : 'SocialLogin',
+		data : "email=" + email + "&nome=" + name + "&cognome="+ surname,
 		type : 'POST',
 		cache : false,
 		error : function() {
-			alert('error');
+			alert('fallito');
 		},
 		async : false,
 		success : function(response) {
@@ -88,12 +88,12 @@ function logoutFacebook() {
 		appId : '1036779133356564'
 	});
 	$.ajax({
-		url : 'sociallogin',
+		url : 'SocialLogin',
 		data : "",
 		type : 'GET',
 		cache : false,
 		success : function(response) {
-			window.location = 'login.jsp';
+			window.location = 'LoginForm.jsp';
 		}
 	});
 }
