@@ -2,14 +2,12 @@ package controller;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import javafx.util.converter.LocalDateTimeStringConverter;
 import model.ComplexAutomobile;
 import model.Statistiche;
 import persistence.DAOFactory;
