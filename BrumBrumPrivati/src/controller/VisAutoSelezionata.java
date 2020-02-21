@@ -9,14 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import javafx.util.Pair;
 import model.Automobile;
 import model.ComplexFeedback;
-import model.Feedback;
 import persistence.DAOFactory;
 import persistenceDao.AutomobileDao;
 import persistenceDao.FeedbackDao;
-import persistenceDao.UtenteDao;
 
 
 public class VisAutoSelezionata extends HttpServlet {
