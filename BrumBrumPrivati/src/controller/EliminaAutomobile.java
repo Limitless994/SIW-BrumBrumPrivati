@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import persistence.DAOFactory;
 import persistenceDao.AutomobileDao;
-import persistenceDao.UtenteDao;
 
 public class EliminaAutomobile extends HttpServlet{
 	

@@ -1,8 +1,7 @@
 package controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,15 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Automobile;
-import model.Ordine;
-import model.Pagamento;
-import model.Spedizione;
 import persistence.DAOFactory;
 import persistenceDao.AutomobileDao;
 
-import persistenceDao.OrdineDao;
-import persistenceDao.PagamentoDao;
-import persistenceDao.SpedizioneDao;
 
 public class CompraAuto extends HttpServlet {
 

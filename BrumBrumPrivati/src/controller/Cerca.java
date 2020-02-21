@@ -11,10 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Automobile;
-import model.Utente;
 import persistence.DAOFactory;
 import persistenceDao.AutomobileDao;
-import persistenceDao.UtenteDao;
 
 public class Cerca extends HttpServlet {
 	

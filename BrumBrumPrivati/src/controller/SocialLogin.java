@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.Utente;
-import persistence.DAOFactory;
 import persistence.DatabaseManager;
 import persistenceDao.UtenteDao;
 
