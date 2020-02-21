@@ -3,8 +3,6 @@ package persistenceDao;
 
 import java.util.List;
 
-import javafx.util.Pair;
-import model.ComplexAutomobile;
 import model.ComplexFeedback;
 import model.Feedback;
 
