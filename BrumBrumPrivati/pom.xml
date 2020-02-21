@@ -50,7 +50,11 @@
 			<version>11</version>
 			<type>pom</type>
 		</dependency>
-
+		<dependency>
+			<groupId>com.zenjava</groupId>
+			<artifactId>javafx-maven-plugin</artifactId>
+			<version>1.5</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.wildfly.swarm</groupId>
