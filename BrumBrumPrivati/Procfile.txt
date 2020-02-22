@@ -1,1 +1,1 @@
-web: java -jar target/BrumBrumPrivati-1.0.0.jar
+web: java -Dswarm.http.port=$PORT $JAVA_OPTS -jar target/BrumBrumPrivati-0.0.1-SNAPSHOT.jar
