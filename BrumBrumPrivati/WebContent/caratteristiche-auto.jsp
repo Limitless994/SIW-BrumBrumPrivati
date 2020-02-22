@@ -230,12 +230,7 @@
 								<h1>Fatto!</h1>
 								<p>Eliminazione avvenuta con successo</p>
 
-								<h3 class="cupon-pop">
-									Your Id: <span>${utente.getNome()}</span>
-								</h3>
-								<a href="EliminaAutomobile?targa=${automobile.targa}"><button
-										class="btn btn--radius-2 btn--green text-md-center">Torna
-										al profilo</button></a> <<<<<<< HEAD
+							
 							</div>
 							<h3 class="cupon-pop">
 								Your Id: <span>${utente.getNome()}</span>

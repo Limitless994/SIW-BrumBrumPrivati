@@ -4,12 +4,9 @@
   "use strict";
 
   try {
-    //WidgetChart 1
+    //WidgetChart 1 - PRIMA FUNZIONE IN ALTO A SINISTRA NELLA PAGINA statisticheADMIN.jsp
     var ctx = document.getElementById("widgetChart1");
-    
-    
-    
-    
+
     if (ctx) {
       ctx.height = 130;
       var myChart = new Chart(ctx, {
@@ -74,7 +71,7 @@
     }
 
 
-    //WidgetChart 2
+    //WidgetChart 2 - SECONDA FUNZIONE PARTENDO DA SINISTRA IN ALTO NELLA PAGINA statisticheADMIN.jsp
     var ctx = document.getElementById("widgetChart2");
     
     var acquistate1 = document.getElementById("acquistato1");
@@ -151,7 +148,7 @@
     }
 
 
-    //WidgetChart 3
+    //WidgetChart 3 - TERZA FUNZIONE PARTENDO DA SINISTRA IN ALTO NELLA PAGINA statisticheADMIN.jsp
     var ctx = document.getElementById("widgetChart3");
     if (ctx) {
       ctx.height = 130;
@@ -221,7 +218,7 @@
     }
 
 
-    //WidgetChart 4
+    //WidgetChart 4 - QUARTA FUNZIONE PARTENDO DA SINISTRA IN ALTO NELLA PAGINA statisticheADMIN.jsp
     var ctx = document.getElementById("widgetChart4");
     
     var incasso1 = document.getElementById("incasso1");
@@ -264,7 +261,7 @@
       });
     }
 
-    // Recent Report
+    // Recent Report - TABELLA VICINA AL GRAFICO A TORTA NELLA PAGINA statisticheADMIN.jsp
     const brandProduct = 'rgba(0,173,95,0.8)'
     const brandService = 'rgba(0,181,233,0.8)'
 
@@ -277,7 +274,7 @@
 
     var ctx = document.getElementById("recent-rep-chart");
     if (ctx) {
-      ctx.height = 250;
+      ctx.height = 100;
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -350,7 +347,7 @@
       });
     }
 
-    // Percent Chart
+    // Percent Chart -  GRAFICO A TORTA NELLA PAGINA statisticheADMIN.jsp
     var ctx = document.getElementById("percent-chart");
     var acquistate = document.getElementById("acquisto");
     var noleggiate = document.getElementById("noleggio");

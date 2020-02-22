@@ -158,8 +158,8 @@ public class OrdineDaoJDBC implements OrdineDao{
 	@Override
 	public void ordine_effettuato_da_utente(String email,Automobile automobile, Ordine ordine) {
 		Connection connection= this.dataSource.getConnection();
-		//long millis=System.currentTimeMillis(); 
-				long millis=1563435694000L; //data 14 gennaio 2020
+		long millis=System.currentTimeMillis(); 
+				//long millis=1563435694000L; //data 14 gennaio 2020
 
 		java.sql.Date data=new java.sql.Date(millis);
 		try {

@@ -14,6 +14,7 @@
 <%@ include file="include/adminCSSstyle.jsp"%>
 </head>
 
+<!-- style della pagina -->
 <style>
 {
 box-sizing
@@ -76,6 +77,11 @@ li {
 }
 }
 </style>
+
+<!-- fine style della pagina -->
+
+
+<!-- SCRIPT USATI NELLA PAGINA, IN PIU' C'È UN'ALTRA FUNZIONE IN admin/js/main.js -->
 
 <script type="text/javascript">
 	function refresh() {
@@ -429,6 +435,8 @@ body {
 									</h3>
 									
 								</div>
+								
+	<!-- Questa parte è gestita in parte da script all'inizio della pagina e in parte nel file WebContent/js/chart.js -->
 					<table>
 					<tr>
 						<td><input type="checkbox" id="valore1" name="vehicle1"
@@ -444,6 +452,7 @@ body {
 							onclick="refresh()"> <label for="vehicle1">Marzo</label></td>
 					</tr>
 					</table>
+	<!-- Questa parte è gestita in parte da script all'inizio della pagina e in parte nel file WebContent/js/chart.js -->
 					</div>
 					</div>
 					</div>

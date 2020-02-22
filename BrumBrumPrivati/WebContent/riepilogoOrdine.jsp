@@ -71,19 +71,18 @@
 				<tbody>
 					<tr>
 						<th scope="row">1</th>
-						<td><img src="${AutomobileAcquistata.getImmagine()}" height=15% width=18%></td>
+						<td><img src="${AutomobileAcquistata.getImmagine()}" height=15% width=22%></td>
 						<td>${AutomobileAcquistata.getMarca()} ${autoDaComprare.getModello()} ${autoDaComprare.getColore()}</td>
 						<td>${AutomobileAcquistata.getPrezzovendita()}</td>
 					</tr>
 					
 						<tr>
 						<td colspan="3"><strong> Prezzo Totale</strong></td>
-						<!--  DA AGGIUSTARE FARE LA SOMMA -->
+						
 						<td>${AutomobileAcquistata.getPrezzovendita()}</td>
 					</tr>
 				</tbody>
 			</table>
-
 			<!-- fine dati automobile-->
 		</section>
 	</form>
