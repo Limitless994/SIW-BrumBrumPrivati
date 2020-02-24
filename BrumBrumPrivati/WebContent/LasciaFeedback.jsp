@@ -37,7 +37,7 @@
 						<h2>
 							Lascia un feedback per il tuo acquisto<span>.</span>
 						</h2>
-							<span class="float-right"><i
+						<span class="float-right"><i
 							class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 							class="text-warning fa fa-star"></i></span> <span class="float-right"><i
 							class="text-warning fa fa-star"></i></span> <span class="float-right"><i
@@ -56,7 +56,8 @@
 					<div class="col-lg-8">
 						<form method="post" action="PostaFeedback" class="contact-form">
 							<div class="row">
-								<textarea id="commento" name="commento" placeholder="Scrivi della tua esperienza con BrumBrum"></textarea>
+								<textarea id="commento" name="commento"
+									placeholder="Scrivi della tua esperienza con BrumBrum"></textarea>
 							</div>
 							<div class="col-lg-12 text-center">
 								<button type="submit">Invia Feedback</button>

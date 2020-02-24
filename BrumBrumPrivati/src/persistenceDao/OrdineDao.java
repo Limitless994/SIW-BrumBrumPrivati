@@ -4,6 +4,7 @@ import java.util.List;
 
 import model.Automobile;
 import model.ComplexAutomobile;
+import model.DettagliRiepilogo;
 import model.Feedback;
 import model.Ordine;
 
@@ -30,4 +31,6 @@ public interface OrdineDao {
 	public List<ComplexAutomobile> listaAutoAcquistate();
 	
 	public List<ComplexAutomobile> listaAutoNoleggiate();
+	
+	public DettagliRiepilogo riepilogo(String targa);
 }

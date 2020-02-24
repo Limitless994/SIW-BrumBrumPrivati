@@ -212,5 +212,15 @@
 		<servlet-name>SocialLogin</servlet-name>
 		<url-pattern>/SocialLogin</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>VisualizzaDettagliOrdine</servlet-name>
+		<servlet-class>controller.VisualizzaDettagliOrdine</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>VisualizzaDettagliOrdine</servlet-name>
+		<url-pattern>/VisualizzaDettagliOrdine</url-pattern>
+	</servlet-mapping>
 
 </web-app>

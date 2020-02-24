@@ -16,8 +16,6 @@ public class AddCar extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		
-		System.out.println("Sono nel DoPost");
 
 		String targa=null, marca=null,  modello=null, categoria=null, colore=null, alimentazione=null, cambio=null, immagine=null,  km=null,  prezzovendita = null,  prezzonoleggio = null, disponibilita="DISPONIBILE";
 
@@ -33,8 +31,8 @@ public class AddCar extends HttpServlet{
 			alimentazione = req.getParameter("alimentazione").toLowerCase();
 			cambio = req.getParameter("cambio").toLowerCase();
 			immagine="./imageAuto/"+modello+".jpg";
-			
-			
+
+
 			System.out.println("sono il modello "+modello);
 			prezzovendita = req.getParameter("prezzovendita");
 			prezzonoleggio = req.getParameter("prezzonoleggio");
@@ -47,14 +45,12 @@ public class AddCar extends HttpServlet{
 		System.out.println(auto);
 		req.getSession().setAttribute("automobile", auto);
 		resp.sendRedirect("confermaInserimentoAuto.jsp");
-		
+
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.sendRedirect("addCar.jsp");
-		
-		System.out.println("Sono nel DoGet");
 	}
 }
 

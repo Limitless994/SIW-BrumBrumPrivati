@@ -45,7 +45,7 @@ public class PostaFeedback extends HttpServlet{
 		uDao.feedback_rilasciato_da(loggedUser, feedback);	
 
 
-		RequestDispatcher rd = req.getRequestDispatcher("i-miei-ordini.jsp"); //queste mi servono per  ricaricare la pagina
+		RequestDispatcher rd = req.getRequestDispatcher("i-miei-ordini.jsp"); 
 		rd.forward(req, resp);
 	}
 

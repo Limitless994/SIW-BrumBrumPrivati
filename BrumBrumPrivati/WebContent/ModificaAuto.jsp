@@ -94,14 +94,16 @@
 											<div class="input-group-desc">
 												<label class="label--desc"></label> <input
 													class="input--style-5" type="text" name="colore"
-													onfocus="this.value=''" value="${automobile.getColore()}" placeholder="colore">
+													onfocus="this.value=''" value="${automobile.getColore()}"
+													placeholder="colore">
 											</div>
 										</div>
 										<div class="col-2 col-lg-5 offset-lg-1">
 											<div class="input-group-desc">
 												<label class="label--desc"></label> <input
 													class="input--style-5" type="text" name="targa"
-													onfocus="this.value=''" value="${automobile.getTarga()}" placeholder="targa">
+													onfocus="this.value=''" value="${automobile.getTarga()}"
+													placeholder="targa">
 											</div>
 										</div>
 									</div>
@@ -118,7 +120,8 @@
 											<div class="input-group-desc">
 												<label class="label--desc"></label> <input
 													class="input--style-5" type="text" name="prezzovendita"
-													onfocus="this.value=''" value="${automobile.getPrezzovendita()}"
+													onfocus="this.value=''"
+													value="${automobile.getPrezzovendita()}"
 													placeholder="prezzo vendita">
 											</div>
 										</div>
@@ -126,7 +129,8 @@
 											<div class="input-group-desc">
 												<label class="label--desc"></label> <input
 													class="input--style-5" type="text" name="prezzonoleggio"
-													onfocus="this.value=''" value="${automobile.getPrezzonoleggio()}"
+													onfocus="this.value=''"
+													value="${automobile.getPrezzonoleggio()}"
 													placeholder="prezzo noleggio">
 											</div>
 										</div>

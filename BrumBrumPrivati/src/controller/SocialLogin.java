@@ -21,7 +21,6 @@ public class SocialLogin extends HttpServlet {
 		System.out.println("doGet");
 		HttpSession session = request.getSession();
 
-		// log-out
 		session.removeAttribute("username");
 		session.removeAttribute("loggato");
 		session.removeAttribute("utente");

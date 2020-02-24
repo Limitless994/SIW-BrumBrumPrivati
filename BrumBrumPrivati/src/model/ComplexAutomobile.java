@@ -15,6 +15,7 @@ public class ComplexAutomobile {
 	private String prezzonoleggio;
 	private String disponibilita;
 	private String data;
+	private String ordine_id;
 	public String getDisponibilita() {
 		return disponibilita;
 	}
@@ -142,8 +143,20 @@ public class ComplexAutomobile {
 		this.prezzonoleggio = prezzonoleggio;
 	}
 
+
+	public String getOrdine_id() {
+		return ordine_id;
+	}
+
+
+	public void setOrdine_id(String ordine_id) {
+		this.ordine_id = ordine_id;
+	}
+
+
 	public ComplexAutomobile(String targa, String marca, String modello, String categoria, String colore, String km,
-			String alimentazione, String cambio, String immagine, String prezzovendita, String prezzonoleggio,String disponibilita,String data) {
+			String alimentazione, String cambio, String immagine, String prezzovendita, String prezzonoleggio,
+			String disponibilita, String data, String ordine_id) {
 		super();
 		this.targa = targa;
 		this.marca = marca;
@@ -157,7 +170,8 @@ public class ComplexAutomobile {
 		this.prezzovendita = prezzovendita;
 		this.prezzonoleggio = prezzonoleggio;
 		this.disponibilita = disponibilita;
-		this.data=data;
+		this.data = data;
+		this.ordine_id = ordine_id;
 	}
 
 
@@ -166,7 +180,9 @@ public class ComplexAutomobile {
 		return "ComplexAutomobile [targa=" + targa + ", marca=" + marca + ", modello=" + modello + ", categoria="
 				+ categoria + ", colore=" + colore + ", km=" + km + ", alimentazione=" + alimentazione + ", cambio="
 				+ cambio + ", immagine=" + immagine + ", prezzovendita=" + prezzovendita + ", prezzonoleggio="
-				+ prezzonoleggio + ", disponibilita=" + disponibilita + ", data=" + data + "]";
+				+ prezzonoleggio + ", disponibilita=" + disponibilita + ", data=" + data + ", ordine_id=" + ordine_id
+				+ "]";
 	}
-	
+
+
 }

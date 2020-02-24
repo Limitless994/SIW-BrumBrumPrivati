@@ -1,20 +1,17 @@
 package persistence;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.servlet.jsp.jstl.sql.Result;
-
 import exception.PersistenceException;
 import model.Automobile;
 import model.ComplexAutomobile;
+import model.DettagliRiepilogo;
 import model.Feedback;
 import model.Ordine;
-import persistenceDao.FeedbackDao;
 import persistenceDao.OrdineDao;
 
 
@@ -159,7 +156,7 @@ public class OrdineDaoJDBC implements OrdineDao{
 	public void ordine_effettuato_da_utente(String email,Automobile automobile, Ordine ordine) {
 		Connection connection= this.dataSource.getConnection();
 		long millis=System.currentTimeMillis(); 
-				//long millis=1563435694000L; //data 14 gennaio 2020
+		//long millis=1563435694000L; //data 14 gennaio 2020
 
 		java.sql.Date data=new java.sql.Date(millis);
 		try {
@@ -193,13 +190,13 @@ public class OrdineDaoJDBC implements OrdineDao{
 		{
 
 			PreparedStatement statement;
-			String query = "select automobile.*, effettua.data FROM effettua INNER JOIN automobile ON effettua.automobile_targa=automobile.targa WHERE utente_email = ?";
+			String query = "select automobile.*, effettua.ordine_id, effettua.data FROM effettua INNER JOIN automobile ON effettua.automobile_targa=automobile.targa WHERE utente_email = ?";
 			statement = connection.prepareStatement(query);
 			statement.setString(1, email);
 			ResultSet result = statement.executeQuery();
 
 			while (result.next()) {
-				auto = new ComplexAutomobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"),result.getString("data"));			
+				auto = new ComplexAutomobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"),result.getString("data"),result.getString("ordine_id"));			
 				out.add(auto);
 			}
 
@@ -269,12 +266,12 @@ public class OrdineDaoJDBC implements OrdineDao{
 		{
 
 			PreparedStatement statement;
-			String query = "select automobile.*, effettua.data FROM effettua INNER JOIN automobile ON effettua.automobile_targa=automobile.targa WHERE disponibilita = 'VENDUTA'";
+			String query = "select automobile.*, effettua.data,effettua.ordine_id FROM effettua INNER JOIN automobile ON effettua.automobile_targa=automobile.targa WHERE disponibilita = 'VENDUTA'";
 			statement = connection.prepareStatement(query);
 			ResultSet result = statement.executeQuery();
 
 			while (result.next()) {
-				auto = new ComplexAutomobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"),result.getString("data"));			
+				auto = new ComplexAutomobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"),result.getString("data"),result.getString("ordine_id"));			
 				out.add(auto);
 			}
 
@@ -298,15 +295,48 @@ public class OrdineDaoJDBC implements OrdineDao{
 		{
 
 			PreparedStatement statement;
-			String query = "select automobile.*, effettua.data FROM effettua INNER JOIN automobile ON effettua.automobile_targa=automobile.targa WHERE disponibilita = 'NOLEGGIATA'";
+			String query = "select automobile.*,effettua.ordine_id, effettua.data FROM effettua INNER JOIN automobile ON effettua.automobile_targa=automobile.targa WHERE disponibilita = 'NOLEGGIATA'";
 			statement = connection.prepareStatement(query);
 			ResultSet result = statement.executeQuery();
 
 			while (result.next()) {
-				auto = new ComplexAutomobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"),result.getString("data"));			
+				auto = new ComplexAutomobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"),result.getString("data"),result.getString("ordine_id"));			
 				out.add(auto);
 			}
 
+			return out;
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+	}
+	@Override
+	public DettagliRiepilogo riepilogo(String targa) {
+		Connection connection = this.dataSource.getConnection();		
+		DettagliRiepilogo out = null;
+		try 
+		{
+
+			PreparedStatement statement = null;
+			String query = "select automobile.*, utente.*, spedizione.indirizzo,pagamento.metodo\r\n" + 
+					"FROM effettua\r\n" + 
+					"INNER JOIN automobile ON effettua.automobile_targa=automobile.targa \r\n" + 
+					"INNER JOIN utente ON effettua.utente_email=utente.email \r\n" + 
+					"INNER JOIN spedizione ON effettua.ordine_id=spedizione.id_spedizione\r\n" + 
+					"INNER JOIN pagamento ON effettua.ordine_id=pagamento.id_pagamento\r\n" + 
+					"WHERE automobile.targa = ?";
+			statement = connection.prepareStatement(query);
+			statement.setString(1, targa);
+
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+			out = new DettagliRiepilogo(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("nome"),result.getString("cognome"),result.getString("indirizzo"),result.getString("metodo"),result.getString("email"));			
+			}
 			return out;
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());

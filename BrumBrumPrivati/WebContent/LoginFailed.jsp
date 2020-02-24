@@ -20,10 +20,17 @@
 
 				<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 					<form class="login100-form validate-form">
-						<p class="login100-form-title p-b-49">La tua auto è stata
-							inserita con successo!</p>
+						<span class="login100-form-title p-b-49 Text-red">
+							Credenziali errate. </span>
+						<p class="login100-form-title p-b-49">Se sei nuovo su
+							brumbrum, crea il tuo account!</p>
 						<p class="txt1 text-center p-t-54 p-b-20">
-							<a href="AdminProfilo.jsp" class="txt2"> Torta indietro. </a>
+							<a href="RegForm.jsp" class="txt2"> Clicca qui per registrati
+							</a>
+						<div class="txt1 text-center p-t-54 p-b-20">
+							oppure <a href="LoginForm.jsp">Riprova</a>
+						</div>
+
 						</p>
 
 						<div class="flex-c-m">
@@ -56,6 +63,8 @@
 		<script src="https://apis.google.com/js/api.js"></script>
 
 		<script src='http://connect.facebook.net/en_US/all.js'></script>
+
+
 
 
 		<!--===============================================================================================-->

@@ -27,18 +27,12 @@
 	<!-- Search model end -->
 
 
-	<script>
-		String
-		nome = $
-		{
-			nome
-		};
-	</script>
+	<script> String nome=${nome};</script>
 	<!-- TITLE -->
 	<form method="post" action="CompraAuto">
 		<section class="page-add">
 			<h2 align="center">
-				<b>RIEPOLOGO ORDINE </b>
+				<b>RIEPOLOGO ORDINE ADMIN </b>
 			</h2>
 		</section>
 		<!-- End  title-->
@@ -48,14 +42,14 @@
 		<section>
 			<div class="row justify-content-between">
 				<div class="col-4">
-					<b>Dati utente </b>
-					<p>${nome}
-						${cognome} <br> ${indirizzo} <br> ${email}
+					<b>Dati acquirente </b>
+					<p>${DR.nome}
+						${DR.cognome} <br> ${DR.indirizzo} <br> ${DR.email}
 					</p>
 				</div>
 				<div class="col-4">
 					<b>Dati pagamento </b>
-					<p>${metodoPagamento}</p>
+					<p>${DR.pagamento}</p>
 				</div>
 			</div>
 		</section>
@@ -77,17 +71,15 @@
 				<tbody>
 					<tr>
 						<th scope="row">1</th>
-						<td><img src="${AutomobileAcquistata.getImmagine()}"
-							height=15% width=22%></td>
-						<td>${AutomobileAcquistata.getMarca()}
-							${autoDaComprare.getModello()} ${autoDaComprare.getColore()}</td>
-						<td>${AutomobileAcquistata.getPrezzovendita()}</td>
+						<td><img src="${DR.getImmagine()}" height=15% width=22%></td>
+						<td>${DR.getMarca()}${DR.getModello()} ${DR.getColore()}</td>
+						<td>${DR.getPrezzovendita()}</td>
 					</tr>
 
 					<tr>
 						<td colspan="3"><strong> Prezzo Totale</strong></td>
 
-						<td>${AutomobileAcquistata.getPrezzovendita()}</td>
+						<td>${DR.getPrezzovendita()}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -98,14 +90,10 @@
 	<!-- bottone conferma ordine -->
 	<section>
 		<div align="center">
-			<form method="post" action="ConfermaOrdine">
-				<button class="btn btn--radius-2 btn--red">Conferma</button>
+			<form method="post" action="statisticheADMIN.jsp">
+				<button class="btn btn--radius-2 btn--red">Indietro</button>
 			</form>
 			<div class="form-row"></div>
-			<a href="CompraAuto?targa=${AutomobileAcquistata.targa}">
-				<button class="btn btn--radius-2 btn--red">Annulla</button>
-			</a>
-
 		</div>
 	</section>
 	<div class="form-row"></div>

@@ -11,31 +11,26 @@ import persistence.DAOFactory;
 import persistenceDao.UtenteDao;
 
 public class EliminaProfilo extends HttpServlet{
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		
+
 	}
-	
-	
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		
-		System.out.println("sono qui e sto eliminando");
-		
+
+		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+
 		UtenteDao uDao = factory.getUtenteDao();
 		String email=req.getParameter("email");
 		uDao.delete(email);
 		req.getSession().setAttribute("utente", null);
 		resp.sendRedirect("byebye.jsp");
-	
-		
-	
-		
+
+
+
+
 	}
 
 }

@@ -17,7 +17,6 @@ public class LeNostreAuto extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//System.out.println("sono servlet nostre auto");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		AutomobileDao uDao = factory.getAutomobileDao();
 		String autoDaCercare=req.getParameter("ricerca");
@@ -25,21 +24,16 @@ public class LeNostreAuto extends HttpServlet{
 	    List<Automobile> leNostreAuto= uDao.listaAutomobili();
 
 	    
-	    req.getSession().setAttribute("automobiliDisponibili", leNostreAuto); //sto passando la lista all'html
+	    req.getSession().setAttribute("automobiliDisponibili", leNostreAuto);
 	    
 		
-		RequestDispatcher rd = req.getRequestDispatcher("le-nostre-auto.jsp"); //queste mi servono per  ricaricare la pagina
+		RequestDispatcher rd = req.getRequestDispatcher("le-nostre-auto.jsp"); 
 		rd.forward(req, resp);
 	}
 
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		/*DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		
-		String autoDaCercare=req.getParameter("ricerca");
-		System.out.println("servlet avviata");*/
-		
 		 resp.sendRedirect("index.jsp");
 
 	}

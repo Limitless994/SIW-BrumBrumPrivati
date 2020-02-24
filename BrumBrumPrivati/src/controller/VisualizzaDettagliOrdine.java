@@ -7,30 +7,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.ComplexAutomobile;
+import model.DettagliRiepilogo;
 import persistence.DAOFactory;
-import persistenceDao.AutomobileDao;
+import persistenceDao.OrdineDao;
 
-public class EliminaAutomobile extends HttpServlet{
-	
+public class VisualizzaDettagliOrdine extends HttpServlet{
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	}
 	
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+		OrdineDao o=factory.getOrdineDAO();
 		
-		AutomobileDao auto = factory.getAutomobileDao();
-		String targa=req.getParameter("targa");
-		auto.delete(targa);
-		
-		try {
-			Thread.sleep(4000);
-			resp.sendRedirect("AdminProfilo.jsp");
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
+		String targa= req.getParameter("automobile");
+		DettagliRiepilogo DR=o.riepilogo(targa);
+		req.getSession().setAttribute("DR", DR);
+		resp.sendRedirect("riepilogoOrdineAdmin.jsp");
 	}
-
 }
+

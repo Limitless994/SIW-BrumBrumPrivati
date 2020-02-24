@@ -18,11 +18,6 @@ public class Cerca extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		/*DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		
-		String autoDaCercare=req.getParameter("ricerca");
-		System.out.println("servlet avviata");*/
-		
 		 resp.sendRedirect("index.jsp");
 
 	}
@@ -35,22 +30,13 @@ public class Cerca extends HttpServlet {
 		String autoDaCercare=null;
 		List<Automobile> autom=new ArrayList<Automobile>();
 		autoDaCercare=req.getParameter("ricerca");
-		System.out.println(autoDaCercare);
 		
 		if(autoDaCercare.length()>=1)
 	    autom= uDao.cercaAuto(autoDaCercare);
 	    
-	    req.getSession().setAttribute("automobiliDisponibili", autom); //sto passando la lista all'html
-	    
-	   // resp.sendRedirect("le-nostre-auto.html");
-	    
-	    for(Automobile auto:autom)
-	    {
-	    	System.out.println("AUTO TROVATA: " + auto.getModello()+" "+auto.getTarga());
-	    }
-		
-		
-		RequestDispatcher rd = req.getRequestDispatcher("le-nostre-auto.jsp"); //queste mi servono per ricaricare la pagina
+	    req.getSession().setAttribute("automobiliDisponibili", autom); 
+	    	    
+		RequestDispatcher rd = req.getRequestDispatcher("le-nostre-auto.jsp");
 		rd.forward(req, resp);
 	}
 

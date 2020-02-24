@@ -84,10 +84,10 @@
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['Gennaio', 'Febbraio', 'Marzo',],
+          labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
           type: 'line',
           datasets: [{
-            data: [acquistate1.value,acquistate2.value,acquistate3.value],
+            data: [acquistate1.value,acquistate2.value,acquistate3.value,7,12,15,20,18,25,12,30,42],
             label: 'Dataset',
             backgroundColor: 'transparent',
             borderColor: 'rgba(255,255,255,.55)',
@@ -235,7 +235,7 @@
           datasets: [
             {
               label: "My First dataset",
-              data: [incasso1.value, incasso2.value, incasso3.value, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              data: [incasso1.value, incasso2.value, incasso3.value, 35000, 44000, 84000, 90000, 77000, 120000, 150000, 130000, 180000],
               borderColor: "transparent",
               borderWidth: "0",
               backgroundColor: "rgba(255,255,255,.3)"
@@ -268,17 +268,17 @@
     var acquistate = document.getElementById("acquisto");
     var noleggiate = document.getElementById("noleggio");
 
-    var elements = 3
-    var data1 = [acquistate.value,acquistate.value,acquistate.value-2,acquistate.value,acquistate.value]
-    var data2 = [noleggiate.value,noleggiate.value+8,noleggiate.value,noleggiate.value+2,noleggiate.value]
+    var elements = 12
+    var data1 = [acquistate.value-3,acquistate.value-5,acquistate.value-8,acquistate.value-1,acquistate.value-2,5,7,8,5,10,9,13]
+    var data2 = [noleggiate.value,noleggiate.value+8,noleggiate.value,noleggiate.value+2,noleggiate.value,12,1,3,5,1,2,3]
 
     var ctx = document.getElementById("recent-rep-chart");
     if (ctx) {
-      ctx.height = 100;
+      ctx.height = 250;
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ['Gennaio', 'Febbraio', 'Marzo',],
+          labels: ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'],
           datasets: [
             {
               label: 'My First dataset',
@@ -322,7 +322,7 @@
                 beginAtZero: true,
                 maxTicksLimit: 5,
                 stepSize: 1,
-                max: 10,
+                max: 20,
                 fontFamily: "Poppins",
                 fontSize: 12
               },

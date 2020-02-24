@@ -17,10 +17,7 @@ import persistence.DAOFactory;
 import persistenceDao.UtenteDao;
 
 public class Cookies extends HttpServlet{
-		
-		/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 		@Override
@@ -37,19 +34,16 @@ public class Cookies extends HttpServlet{
 				jsonReceived = jsonReceived + line + "\n";
 				line = reader.readLine();
 			}
-//			System.out.println(jsonReceived);
 			String p= jsonReceived.replace("\n", "");
 			
 			try {
 				String email=req.getParameter("email");
 				Utente u=uDao.find(email);
-//				System.out.println(u.toString());
 				req.getSession().setAttribute("utente", u);
 				RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 				rd.forward(req, resp);
 				
 			} catch (JSONException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		

@@ -20,9 +20,9 @@ public class ModificaAuto extends HttpServlet{
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		String targa=m.getTarga(), marca=m.getMarca(),  modello=m.getModello(), categoria=m.getCategoria(), colore=m.getColore(), alimentazione=m.getAlimentazione(), cambio=m.getCambio(), immagine=m.getAlimentazione(),  
 				km=m.getKm(),  prezzovendita =m.getPrezzovendita() ,  prezzonoleggio = m.getPrezzonoleggio(), disponibilita=m.getDisponibilita();
-		
-	
-		
+
+
+
 		targa = req.getParameter("targa");
 		marca = req.getParameter("marca");
 		modello = req.getParameter("modello");
@@ -34,7 +34,7 @@ public class ModificaAuto extends HttpServlet{
 		prezzovendita = req.getParameter("prezzovendita");
 		prezzonoleggio = req.getParameter("prezzonoleggio");
 		immagine=m.getImmagine();
-		
+
 		if(categoria==null) {
 			categoria=m.getCategoria();
 		}
@@ -44,7 +44,7 @@ public class ModificaAuto extends HttpServlet{
 		if(cambio==null) {
 			cambio=m.getCambio();
 		}
-		
+
 		Automobile auto = new Automobile(targa, marca, modello, categoria, colore, km, alimentazione, cambio, immagine, prezzovendita, prezzonoleggio, disponibilita);
 		AutomobileDao autoDao = factory.getAutomobileDao();
 		System.out.println(auto);
@@ -54,10 +54,9 @@ public class ModificaAuto extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("DOGET MODIFICA AUTO");
 
 		resp.sendRedirect("ModificaAuto.jsp");
-		
+
 	}
 }
 

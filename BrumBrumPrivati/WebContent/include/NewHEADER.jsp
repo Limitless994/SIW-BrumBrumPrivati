@@ -103,8 +103,15 @@
 				<li><a href="Come-funziona.jsp">Come Funziona</a></li>
 				<li><a href="contact.jsp">Contatti</a></li>
 				<li><c:if test="${utente.getEmail() != null}">
-						<a href="StoricoOrdini?emailLoggato=${utente.getEmail()}">Storico
-							Ordini</a>
+						<c:if test="${utente.getEmail() != 'admin@admin.it'}">
+							<a href="StoricoOrdini?emailLoggato=${utente.getEmail()}">Storico
+								Ordini</a>
+						</c:if>
+						<c:if test="${utente.getEmail() == 'admin@admin.it'}">
+							<a href="CaricaStatAdmin">Statistiche</a>
+						</c:if>
+
+
 					</c:if></li>
 
 

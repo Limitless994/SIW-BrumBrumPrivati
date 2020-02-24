@@ -18,14 +18,17 @@
 <style>
 {
 box-sizing
+
+
 :
+
  
+
 border-box
+
+
 ;
-
-
 }
-
 input[type="checkbox"] {
 	vertical-align: middle;
 	color: #ffffff;
@@ -58,14 +61,33 @@ input[type="checkbox"] {
 	color: black;
 	display: block
 }
-
 #myUL
+
+
 li
+
+
 a
+
+
 :hover
+
+
 :not
- (.header ) {
-	background-color: #eee;
+
+ 
+(
+.header
+ 
+)
+{
+background-color
+:
+ 
+#eee
+;
+
+
 }
 </style>
 
@@ -135,14 +157,10 @@ li {
 	margin-right: 5px;
 	margin-bottom: 5px;
 	font-size: 16px;
-	
-	
 }
 
 input[type="checkbox"] {
-
 	background-color: #ffffff;
-
 }
 
 table {
@@ -168,14 +186,13 @@ table tr:nth-child(odd) {
 }
 
 body {
-  background-color: white;
+	background-color: white;
 }
-
 </style>
 
 
 
-<body >
+<body>
 	<div class="page-wrapper" align="center">
 		<!-- HEADER MOBILE-->
 
@@ -386,9 +403,9 @@ body {
 							</div>
 						</div>
 						<div class="form-row"></div>
-						
-						
-						
+
+
+
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="au-card-title"
@@ -399,7 +416,7 @@ body {
 									</h3>
 								</div>
 								<div class="table-responsive table--no-card m-b-40">
-								<div class="form-row"></div>
+									<div class="form-row"></div>
 									<div class="container">
 										<div class="col-md-8 col-md-offset-2">
 											<input type="text" id="myInput" onkeyup="myFunction()"
@@ -411,10 +428,11 @@ body {
 										<ul id="myUL">
 											<c:forEach items="${statistiche.getAutoAcquistate()}"
 												var="automobile">
-												<li><a href="#"> ${automobile.marca} |
-														${automobile.modello} | ${automobile.categoria} |
-														${automobile.colore} | ${automobile.alimentazione} |
-														${automobile.cambio}</a></li>
+												<li><a
+													href="VisualizzaDettagliOrdine?automobile=${automobile.targa}">
+														${automobile.marca} | ${automobile.modello} |
+														${automobile.categoria} | ${automobile.colore} |
+														${automobile.alimentazione} | ${automobile.cambio}</a></li>
 											</c:forEach>
 										</ul>
 									</table>
@@ -423,45 +441,46 @@ body {
 						</div>
 
 						<div class="form-row"></div>
-						
-						<div class="row">
-						<div class="col-lg-12">
-							<div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
-							<div class="au-card-title"
-									style="background-image: url('images/bg-title-01.jpg');">
-									<div class="bg-overlay bg-overlay--blue"></div>
-									<h3>
-										<i class="zmdi zmdi-account-calendar"></i>Grafico auto vendute in base ai mesi
-									</h3>
-									
-								</div>
-								
-	<!-- Questa parte è gestita in parte da script all'inizio della pagina e in parte nel file WebContent/js/chart.js -->
-					<table>
-					<tr>
-						<td><input type="checkbox" id="valore1" name="vehicle1"
-							value='${statistiche.getStoricoNumerAutoVendute()[0]}'
-							onclick="refresh()"> <label for="vehicle1">Gennaio</label></td>
 
-						<td><input type="checkbox" id="valore2" name="vehicle1"
-							value='${statistiche.getStoricoNumerAutoVendute()[1]}'
-							onclick="refresh()"> <label for="vehicle1">Febbraio</label></td>
-						
-						<td><input type="checkbox" id="valore3" name="vehicle1"
-							value='${statistiche.getStoricoNumerAutoVendute()[3]}'
-							onclick="refresh()"> <label for="vehicle1">Marzo</label></td>
-					</tr>
-					</table>
-	<!-- Questa parte è gestita in parte da script all'inizio della pagina e in parte nel file WebContent/js/chart.js -->
-					</div>
-					</div>
-					</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="au-card au-card--no-shadow au-card--no-pad m-b-40">
+									<div class="au-card-title"
+										style="background-image: url('images/bg-title-01.jpg');">
+										<div class="bg-overlay bg-overlay--blue"></div>
+										<h3>
+											<i class="zmdi zmdi-account-calendar"></i>Grafico auto
+											vendute in base ai mesi
+										</h3>
+
+									</div>
+
+									<!-- Questa parte è gestita in parte da script all'inizio della pagina e in parte nel file WebContent/js/chart.js -->
+									<table>
+										<tr>
+											<td><input type="checkbox" id="valore1" name="vehicle1"
+												value='${statistiche.getStoricoNumerAutoVendute()[0]}'
+												onclick="refresh()"> <label for="vehicle1">Gennaio</label></td>
+
+											<td><input type="checkbox" id="valore2" name="vehicle1"
+												value='${statistiche.getStoricoNumerAutoVendute()[1]}'
+												onclick="refresh()"> <label for="vehicle1">Febbraio</label></td>
+
+											<td><input type="checkbox" id="valore3" name="vehicle1"
+												value='${statistiche.getStoricoNumerAutoVendute()[3]}'
+												onclick="refresh()"> <label for="vehicle1">Marzo</label></td>
+										</tr>
+									</table>
+									<!-- Questa parte è gestita in parte da script all'inizio della pagina e in parte nel file WebContent/js/chart.js -->
+								</div>
+							</div>
+						</div>
 						<div style="width: 50%;">
 							<canvas id="mycanvas"></canvas>
 						</div>
 					</div>
-<div class="form-row">
-</div><div class="form-row"></div>
+					<div class="form-row"></div>
+					<div class="form-row"></div>
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="au-card au-card--no-shadow au-card--no-pad m-b-40">

@@ -44,17 +44,16 @@ public class VisAutoSelezionata extends HttpServlet {
 		req.getSession().setAttribute("isBuying", "buying");
 		
 		req.getSession().setAttribute("targa", targa);
-		//System.out.println(b);
 				  
 		FeedbackDao fbDao=factory.getFeedbackDAO();
 		List<ComplexFeedback> feedbacks= fbDao.getFeedbackByModel(autom.getModello());
 
 
-		req.getSession().setAttribute("automobile", autom); //sto passando la lista all'html
+		req.getSession().setAttribute("automobile", autom); 
 
 		req.getSession().setAttribute("listaFeedback", feedbacks);
 
-		RequestDispatcher rd = req.getRequestDispatcher("caratteristiche-auto.jsp"); //queste mi servono per  ricaricare la pagina
+		RequestDispatcher rd = req.getRequestDispatcher("caratteristiche-auto.jsp"); 
 		rd.forward(req, resp);
 
 	}

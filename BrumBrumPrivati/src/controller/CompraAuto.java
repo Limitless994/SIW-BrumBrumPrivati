@@ -72,7 +72,7 @@ public class CompraAuto extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		targaAuto=req.getParameter("targa");
 
-		RequestDispatcher rd = req.getRequestDispatcher("CompraAuto.jsp"); //queste mi servono per  ricaricare la pagina
+		RequestDispatcher rd = req.getRequestDispatcher("CompraAuto.jsp"); 
 		rd.forward(req, resp);
 	}
 }

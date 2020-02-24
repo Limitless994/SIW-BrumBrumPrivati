@@ -14,46 +14,48 @@
 <body>
 	<section class="related-product spad">
 		<div class="container">
-		<section class="page-add">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="page-breadcrumb">
-						<h2>
-							Automobili<span>.</span>
-						</h2>
-						<a href="index.jsp">Home</a> <a href="le-nostre-auto.jsp">Automobili</a> <a class="active"
-							href="#">Vendita</a>
+			<section class="page-add">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="page-breadcrumb">
+								<h2>
+									Automobili<span>.</span>
+								</h2>
+								<a href="index.jsp">Home</a> <a href="le-nostre-auto.jsp">Automobili</a>
+								<a class="active" href="#">Vendita</a>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<img src="img/cart/autosaloon.jpg" alt="">
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-8">
-					<img src="img/cart/autosaloon.jpg" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
+			</section>
 			<!-- Sessione per visualizzare le auto -->
-			
-			<form method="get" action="VisAutoSelezionata">
-			<div class="gallery">
-					<c:forEach items="${automobiliDisponibili}" var="autom">
-					
-								<figure>
-									<a href="VisAutoSelezionata?targa=${autom.getTarga()}"><img
-										src="${autom.immagine}" alt=""></a>
-									<!--  <input type="image" name="macchina"  src="${autom.immagine}">  -->
-								<!-- 	<div class="p-status">new</div> -->
-									
-								</figure>
-								<div class="product-text">
-									<a href="VisAutoSelezionata?targa=${autom.targa}"> <h6>${autom.marca} ${autom.modello}</h6></a>
-									<p>vendita: ${autom.prezzovendita}</p>
-									<p>noleggio: ${autom.prezzonoleggio}</p>
-								</div>
 
-				</c:forEach>
-			
-			</div>
+			<form method="get" action="VisAutoSelezionata">
+				<div class="gallery">
+					<c:forEach items="${automobiliDisponibili}" var="autom">
+
+						<figure>
+							<a href="VisAutoSelezionata?targa=${autom.getTarga()}"><img
+								src="${autom.immagine}" alt=""></a>
+							<!--  <input type="image" name="macchina"  src="${autom.immagine}">  -->
+							<!-- 	<div class="p-status">new</div> -->
+
+						</figure>
+						<div class="product-text">
+							<a href="VisAutoSelezionata?targa=${autom.targa}">
+								<h6>${autom.marca}${autom.modello}</h6>
+							</a>
+							<p>vendita: ${autom.prezzovendita}</p>
+							<p>noleggio: ${autom.prezzonoleggio}</p>
+						</div>
+
+					</c:forEach>
+
+				</div>
 			</form>
 			<!-- fine sessione per visualizzare le auto -->
 
