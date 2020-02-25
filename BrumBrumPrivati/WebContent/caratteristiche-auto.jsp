@@ -51,6 +51,8 @@
 
 <%@ include file="include/headindex.jsp"%>
 <%@ include file="include/NewHEADER.jsp"%>
+
+
 </head>
 
 <body>
@@ -66,51 +68,68 @@
 		</div>
 	</div>
 	<div class="form-row"></div>
-	<div class="form-row"></div>
-	<div id="myPano" class="pano" style="display: none">
-		<div class="controls">
-			<a href="#" class="left">&laquo;</a> <a href="#" class="right">&raquo;</a>
-		</div>
-	</div>
-	<!-- Sessione per visualizzare le auto -->
 	<div class="value" align="center">
-		<img width=50% height=50% src="${automobile.immagine}" alt=""
-			name="preview" style="display: block" id="preview">
-	</div>
-	<!--   <%@ include file="SphericalView.jsp"%>-->
+		<h3>Scegli cosa visualizzare</h3>
 
-
-	<div class="form-row"></div>
-	<div>
-	<div align="center">
-		<h1>Scegli cosa visualizzare</h1>
-                <div id="results"></div>
-
-	<div class="value" align="center">
-		<div class="form-row p-t-20"></div>
 		<select type="text" name="selettoreImmagine" id="selettoreImmagine "
 			onchange="CheckColors(this.value);">
 			<option value="esterni">Esterni</option>
 			<option value="interni">Interni</option>
 		</select>
 	</div>
+	<div class="form-row"></div>
+	<div id="myPano" class="pano" style="display: none">
+		<div class="controls">
+			<a href="#" class="left">&laquo;</a> <a href="#" class="right">&raquo;</a>
+		</div>
 	</div>
 
-<div class="form-row"></div>
-<div class="form-row"></div>	
-	<div class="col-sm-12 col-lg-12" align="center">
+	<!-- Sessione per visualizzare le auto -->
 
-	<div class="col-lg-3" align="center">
-	 <form action="#">
-                <h2>Cercala su YouTube</h2>
-                    <p align="center"><input type="text" id="search" placeholder="${automobile.marca} ${automobile.modello}" autocomplete="off" class="form-control" /></p>
-                    <p align="center"><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
-                </form>
-                
-      </div>
-</div>
 
-	
+	<div class="value" align="center">
+		<img width=50% height=50% src="${automobile.immagine}" alt=""
+			name="preview" style="display: block" id="preview">
+		<!--   <%@ include file="SphericalView.jsp"%>-->
+	</div>
+
+	<div class="form-row"></div>
+
+	<!-- VISUALIZZAZIONE INTERNI ED ESTERNI -->
+
+
+
+	<div class="form-row"></div>
+	<div class="form-row"></div>
+
+	<section>
+		<div class="col-sm-12 col-lg-12" align="center">
+
+			<div class="col-lg-3" align="center">
+				<form action="#">
+					<h2>
+						<i class="fa fa-youtube"></i><span> </span>Cercala su YouTube
+					</h2>
+
+					<p align="center">
+						<input type="text" id="search"
+							value="${automobile.marca} ${automobile.modello} hdmotori"
+							autocomplete="off" class="form-control"/>
+					</p>
+					<p align="center">
+						<input type="submit" value="Search"
+							class="form-control btn btn-secondary">
+					</p>
+				</form>
+				
+			</div>
+			<div class="form-row"></div>
+				<div id="results"></div>
+		</div>
+
+
+	</section>
+
 
 
 	<div>
@@ -262,7 +281,7 @@
 				</div>
 			</div>
 		</div>
-		</div>
+
 
 
 

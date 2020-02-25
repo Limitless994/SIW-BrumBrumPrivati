@@ -165,6 +165,21 @@ ol {
 	text-transform: uppercase;
 }
 
+.terziary-btn {
+	background-color: #fff;
+	border: solid;
+	border-style:solid;
+	border-color: #000000;
+	color: black;
+	padding: 0px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
 .site-btn {
 	color: #1e1e1e;
 	display: inline-block;
