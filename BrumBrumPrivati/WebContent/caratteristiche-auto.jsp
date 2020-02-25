@@ -102,7 +102,7 @@
 
 	<div class="col-lg-3" align="center">
 	 <form action="#">
-                <h2>Cercala su youtube</h2>
+                <h2>Cercala su YouTube</h2>
                     <p align="center"><input type="text" id="search" placeholder="${automobile.marca} ${automobile.modello}" autocomplete="off" class="form-control" /></p>
                     <p align="center"><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
                 </form>
