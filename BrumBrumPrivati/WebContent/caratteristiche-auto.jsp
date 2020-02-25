@@ -81,20 +81,10 @@
 
 
 	<div class="form-row"></div>
+	<div>
 	<div align="center">
 		<h1>Scegli cosa visualizzare</h1>
-		  
-            
-                <form action="#" align="center">
-                <label>Cercala su youtube</label>
-                    <p align="center"><input type="text" id="search" placeholder="${automobile.marca} ${automobile.modello}" autocomplete="off" class="form-control" /></p>
-                    <p align="center"><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
-                </form>
                 <div id="results"></div>
-            
-     
-	</div>
-
 
 	<div class="value" align="center">
 		<div class="form-row p-t-20"></div>
@@ -104,6 +94,23 @@
 			<option value="interni">Interni</option>
 		</select>
 	</div>
+	</div>
+
+<div class="form-row"></div>
+<div class="form-row"></div>	
+	<div class="col-sm-12 col-lg-12" align="center">
+
+	<div class="col-lg-3" align="center">
+	 <form action="#">
+                <h2>Cercala su youtube</h2>
+                    <p align="center"><input type="text" id="search" placeholder="${automobile.marca} ${automobile.modello}" autocomplete="off" class="form-control" /></p>
+                    <p align="center"><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+                </form>
+                
+      </div>
+</div>
+
+	
 
 
 	<div>
