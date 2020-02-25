@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="false" 
+  realizations="false" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="persistence.SpedizioneDaoJDBC" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/SpedizioneDaoJDBC.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3370" y="1751"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="persistence.PostgresDAOFactory" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/PostgresDAOFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2275" y="1602"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="persistence.AutomobileDaoJDBC" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/AutomobileDaoJDBC.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2025" y="2031"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="persistence.UtenteDaoJDBC" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/UtenteDaoJDBC.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2449" y="2054"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="persistence.DataSource" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/DataSource.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2771" y="1611"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="persistence.FeedbackDaoJDBC" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/FeedbackDaoJDBC.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2865" y="2054"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="persistence.OrdineDaoJDBC" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/OrdineDaoJDBC.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3321" y="2116"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="persistence.PagamentoDaoJDBC" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/PagamentoDaoJDBC.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3362" y="1569"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="persistence.DatabaseManager" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/DatabaseManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2732" y="1288"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="persistence.DAOFactory" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/persistence/DAOFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1534" y="993"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="controller.AddCar" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/AddCar.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="980" y="1700"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="controller.Cerca" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/Cerca.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="560" y="1694"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="controller.Login" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/Login.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="524" y="1500"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="controller.ModificaAuto" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/ModificaAuto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="490" y="1324"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="controller.NoleggiaAuto" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/NoleggiaAuto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="418" y="1112"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="controller.CompraAuto" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/CompraAuto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1394" y="1728"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="controller.CaricaStatAdmin" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/CaricaStatAdmin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="498" y="886"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="controller.ConfermaOrdine" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/ConfermaOrdine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="566" y="662"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="controller.EliminaProfilo" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/EliminaProfilo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="716" y="506"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="controller.EliminaAutomobile" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/EliminaAutomobile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="902" y="332"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="controller.Cookies" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/Cookies.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1126" y="168"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="controller.PostaFeedback" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/PostaFeedback.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1538" y="152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="controller.ProfiloUtente" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/ProfiloUtente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1812" y="1698"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="controller.VisualizzaDettagliOrdine" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/VisualizzaDettagliOrdine.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1950" y="154"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="controller.RilasciaFeedback" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/RilasciaFeedback.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2360" y="156"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="controller.RegistrazioneUtente" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/RegistrazioneUtente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2498" y="320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="controller.SocialLogin" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/SocialLogin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2714" y="854"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="controller.StoricoOrdini" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/StoricoOrdini.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2616" y="482"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="controller.VisAutoSelezionata" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/VisAutoSelezionata.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2694" y="634"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="controller.LeNostreAuto" project="BrumBrumPrivati" 
+    file="/BrumBrumPrivati/src/controller/LeNostreAuto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2436" y="1084"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="31">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="35">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="36" name="instance"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="38">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="39">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="40">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="41">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="44">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="45" name="dataSource">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </attribute>      
+      <multiplicity id="46" minimum="0" maximum="1">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="47">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="49">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="50">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="51">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="52">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="53">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="54" name="dataSource">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="1">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="57" name="dataSource">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </attribute>      
+      <multiplicity id="58" minimum="0" maximum="1">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="60">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="61">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="62" name="dataSource">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </attribute>      
+      <multiplicity id="63" minimum="0" maximum="1">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="64">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="65" name="daoFactory"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="68" name="dataSource">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </attribute>      
+      <multiplicity id="69" minimum="0" maximum="1">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="70">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="71">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="72">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="73">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="74" name="dataSource">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </attribute>      
+      <multiplicity id="75" minimum="0" maximum="1">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="77" name="dataSource">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </attribute>      
+      <multiplicity id="78" minimum="0" maximum="1">        
+        <position height="0" width="0" x="366" y="224"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="79">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="false" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

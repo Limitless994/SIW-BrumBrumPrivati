@@ -83,6 +83,16 @@
 	<div class="form-row"></div>
 	<div align="center">
 		<h1>Scegli cosa visualizzare</h1>
+		  
+            
+                <form action="#" align="center">
+                <label>Cercala su youtube</label>
+                    <p align="center"><input type="text" id="search" placeholder="${automobile.marca} ${automobile.modello}" autocomplete="off" class="form-control" /></p>
+                    <p align="center"><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+                </form>
+                <div id="results"></div>
+            
+     
 	</div>
 
 
@@ -94,6 +104,7 @@
 			<option value="interni">Interni</option>
 		</select>
 	</div>
+
 
 	<div>
 
@@ -230,7 +241,7 @@
 								<h1>Fatto!</h1>
 								<p>Eliminazione avvenuta con successo</p>
 
-							
+
 							</div>
 							<h3 class="cupon-pop">
 								Your Id: <span>${utente.getNome()}</span>
@@ -269,6 +280,9 @@
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="js/youtubeApp.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
