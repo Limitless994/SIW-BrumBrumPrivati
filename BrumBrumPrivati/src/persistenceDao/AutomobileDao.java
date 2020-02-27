@@ -27,6 +27,8 @@ public interface AutomobileDao {
 
 	void auto_Corrisponde_Ordine(String id_auto, String id_ordine);
 
+	public List<Automobile> cercaAutoIntera(String daCercare);
+
 
 }
 

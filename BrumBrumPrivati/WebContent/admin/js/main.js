@@ -269,8 +269,8 @@
     var noleggiate = document.getElementById("noleggio");
 
     var elements = 12
-    var data1 = [acquistate.value-3,acquistate.value-5,acquistate.value-8,acquistate.value-1,acquistate.value-2,5,7,8,5,10,9,13]
-    var data2 = [noleggiate.value,noleggiate.value+8,noleggiate.value,noleggiate.value+2,noleggiate.value,12,1,3,5,1,2,3]
+    var data1 = [acquistate.value-3,acquistate.value-2,acquistate.value-2,acquistate.value-1,acquistate.value-2,5,7,8,5,10,9,13]
+    var data2 = [noleggiate.value,noleggiate.value-2,noleggiate.value,noleggiate.value,noleggiate.value,12,1,3,5,1,2,3]
 
     var ctx = document.getElementById("recent-rep-chart");
     if (ctx) {
@@ -322,7 +322,7 @@
                 beginAtZero: true,
                 maxTicksLimit: 5,
                 stepSize: 1,
-                max: 20,
+                max: 18,
                 fontFamily: "Poppins",
                 fontSize: 12
               },

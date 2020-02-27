@@ -202,7 +202,7 @@
 		<servlet-name>facebookLogin</servlet-name>
 		<url-pattern>/facebookLogin</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>SocialLogin</servlet-name>
 		<servlet-class>controller.SocialLogin</servlet-class>
@@ -212,8 +212,8 @@
 		<servlet-name>SocialLogin</servlet-name>
 		<url-pattern>/SocialLogin</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>VisualizzaDettagliOrdine</servlet-name>
 		<servlet-class>controller.VisualizzaDettagliOrdine</servlet-class>
 	</servlet>

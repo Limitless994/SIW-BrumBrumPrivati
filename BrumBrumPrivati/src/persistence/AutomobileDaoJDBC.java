@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import exception.PersistenceException;
 import model.Automobile;
@@ -94,7 +95,7 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 
 	@Override
 	public void delete(String targa) {
-		
+
 		Connection connection = this.dataSource.getConnection();
 		String sql1 = "DELETE FROM aggiunta WHERE automobile_id = ?"; 
 
@@ -148,7 +149,7 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 				throw new PersistenceException(e.getMessage());
 			}
 		}
-		
+
 	}
 
 
@@ -166,6 +167,60 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 			statement = connection.prepareStatement(query);
 			statement.setString(1, "%"+daCercare+"%");
 			statement.setString(2, "%"+daCercare+"%");
+			ResultSet result = statement.executeQuery();
+
+			while (result.next()) {
+				auto =new Automobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"));	
+				automobili.add(auto);
+			}
+
+			return automobili;
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+	}
+
+	@Override
+	public List<Automobile> cercaAutoIntera(String daCercare)
+	{
+		Connection connection = this.dataSource.getConnection();
+		List<Automobile> automobili = new LinkedList<>();
+
+		StringTokenizer defaultTokenizer = new StringTokenizer(daCercare);
+		int cont=0;
+
+		String parola1=null, parola2=null;
+
+		while (defaultTokenizer.hasMoreTokens())
+		{
+			if(cont==0)
+				parola1=defaultTokenizer.nextToken();
+			else if(cont==1)
+				parola2=defaultTokenizer.nextToken();
+			cont++;
+		}
+
+		try 
+		{
+			Automobile auto;
+			PreparedStatement statement;
+			String query = "select * from automobile where ((disponibilita = ('DISPONIBILE') and lower(marca) like lower(?)) and" + 
+					"(disponibilita = ('DISPONIBILE') and lower(modello) like lower(?)))" + 
+					"or" + 
+					"((disponibilita = ('DISPONIBILE') and lower(modello) like lower(?)) and" + 
+					"(disponibilita = ('DISPONIBILE') and lower(marca) like lower(?)) )" ;
+			statement = connection.prepareStatement(query);
+			statement.setString(1, "%"+parola1+"%");
+			statement.setString(2, "%"+parola2+"%");
+			statement.setString(3, "%"+parola1+"%");
+			statement.setString(4, "%"+parola2+"%");
+
 			ResultSet result = statement.executeQuery();
 
 			while (result.next()) {
@@ -211,7 +266,7 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 		}
 
 	}
-	
+
 	@Override
 	public List<Automobile> listaAutomobili(){
 		Connection connection = this.dataSource.getConnection();
@@ -227,7 +282,7 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 
 			while (result.next()) {
 				auto =new Automobile(result.getString("targa"), result.getString("marca"), result.getString("modello"), result.getString("categoria"), result.getString("colore"), result.getString("km"), result.getString("alimentazione"), result.getString("cambio"), result.getString("immagine"), result.getString("prezzovendita"), result.getString("prezzonoleggio"), result.getString("disponibilita"));	
-				
+
 				automobili.add(auto);
 			}
 
@@ -261,9 +316,9 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 				throw new PersistenceException(e.getMessage());
 			}
 		}
-		
+
 	}
-	
+
 	@Override
 	public void auto_aggiunta_al_carrello(String targa, String id_carrello) {
 		Connection connection= this.dataSource.getConnection();
@@ -282,7 +337,7 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 				throw new PersistenceException(e.getMessage());
 			}
 		}
-		
+
 	}
 
 	@Override
@@ -312,7 +367,7 @@ public class AutomobileDaoJDBC implements AutomobileDao{
 				throw new PersistenceException(e.getMessage());
 			}
 		}		
-		
+
 	}
 
 
